@@ -1,0 +1,2299 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary: Story Lesson & Listening and Speaking Lesson</title>
+    <!-- تحميل مكتبة Tailwind CSS للتصميم العصري المتجاوب -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- تحميل خطوط عربية وإنجليزية واضحة ومناسبة للتعليم -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- أيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f0f9ff;
+            background-image:
+                radial-gradient(at 10% 10%, rgba(125, 211, 252, 0.5) 0px, transparent 50%),
+                radial-gradient(at 90% 15%, rgba(196, 181, 253, 0.45) 0px, transparent 50%),
+                radial-gradient(at 85% 85%, rgba(254, 240, 138, 0.45) 0px, transparent 50%),
+                radial-gradient(at 15% 85%, rgba(167, 243, 208, 0.5) 0px, transparent 50%),
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230284c7' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+        .en-text {
+            font-family: 'Fredoka', 'Inter', sans-serif;
+            direction: ltr;
+            unicode-bidi: isolate;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.85); opacity: 0.85; }
+            50% { transform: scale(1.18); opacity: 0.25; }
+            100% { transform: scale(0.85); opacity: 0.85; }
+        }
+        .speaking-ring {
+            animation: pulse-ring 1.5s infinite ease-in-out;
+        }
+        @keyframes float-gentle {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-4px); }
+        }
+        .animate-float {
+            animation: float-gentle 4s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+            animation: float-gentle 4.5s ease-in-out 1.2s infinite;
+        }
+        .audio-btn {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+        .audio-btn:hover {
+            transform: scale(1.05);
+        }
+        .audio-btn:active {
+            transform: scale(0.95);
+        }
+        .clickable-phrase {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .clickable-phrase:hover {
+            transform: scale(1.015);
+        }
+        .shake {
+            animation: shake 0.45s ease-in-out;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20% { transform: translateX(-6px); }
+            40% { transform: translateX(6px); }
+            60% { transform: translateX(-4px); }
+            80% { transform: translateX(4px); }
+        }
+        .active-reading-box {
+            background-color: #fef9c3 !important;
+            border-color: #f59e0b !important;
+            box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.38), 0 12px 22px -4px rgba(245, 158, 11, 0.25) !important;
+            transform: scale(1.022);
+            transition: all 0.25s ease;
+            position: relative;
+            z-index: 10;
+        }
+        .active-reading-text {
+            background: linear-gradient(120deg, #fde047 0%, #fef08a 100%);
+            padding: 2px 8px;
+            border-radius: 8px;
+            color: #78350f !important;
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+            transition: all 0.25s ease;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-slate-800 pb-20">
+
+    <!-- شريط علوي ثابت يوضح عنوان الدرس -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-sky-100">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+            <!-- عنوان الدرس -->
+            <div class="flex items-center gap-3">
+                <button type="button" onclick="speakText('Story Lesson and Listening and Speaking Lesson Vocabulary.')" class="audio-btn bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white px-5 py-1.5 rounded-full font-bold text-base sm:text-xl shadow-md flex items-center gap-2" title="اضغط لسماع العنوان">
+                    <span class="en-text">Vocabulary Lessons</span>
+                    <i class="fa-solid fa-ear-listen text-sky-200 text-base"></i>
+                </button>
+                <span class="hidden md:inline-block text-sm font-semibold text-slate-600 bg-slate-100 px-3 py-1 rounded-full">
+                    المفردات المصوّرة والناطقة (22 كلمة)
+                </span>
+            </div>
+
+            <!-- زر إيقاف يظهر فقط أثناء تشغيل الصوت -->
+            <button type="button" onclick="stopAudio()" id="stop-audio-btn" class="hidden bg-rose-100 hover:bg-rose-200 text-rose-700 px-3.5 py-1.5 rounded-full text-xs font-bold transition shadow-sm">
+                <i class="fa-solid fa-stop"></i> إيقاف
+            </button>
+        </div>
+    </header>
+
+    <!-- مؤشر القراءة الحي -->
+    <div id="liveReadingToast" class="fixed bottom-16 left-1/2 -translate-x-1/2 z-50 bg-slate-900/95 backdrop-blur-md text-white px-5 py-2.5 rounded-2xl shadow-2xl border border-slate-700 flex items-center gap-3 transition-all duration-300 opacity-0 pointer-events-none translate-y-8 max-w-[94vw]">
+        <div class="w-3 h-3 rounded-full bg-emerald-400 animate-ping flex-shrink-0"></div>
+        <div class="truncate" dir="ltr">
+            <span id="toastRateLabel" class="text-[11px] text-slate-400 block font-sans">Calm Educational Voice (0.76x):</span>
+            <span id="toastWord" class="en-text font-black text-amber-300 text-base sm:text-lg tracking-wide">...</span>
+        </div>
+    </div>
+
+    <!-- صندوق الإشعارات اللطيف -->
+    <div id="toast-message" class="fixed bottom-5 left-1/2 transform -translate-x-1/2 z-50 hidden bg-slate-800 text-white px-6 py-3 rounded-2xl shadow-xl font-bold text-sm flex items-center gap-2 transition-all">
+        <i class="fa-solid fa-sparkles text-yellow-400"></i>
+        <span id="toast-text">أحسنت!</span>
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="max-w-6xl mx-auto px-4 pt-6 space-y-10">
+
+        <!-- شريط أدوات المراجعة الذاتية -->
+        <div class="bg-white rounded-2xl border border-sky-200 px-5 py-3.5 shadow-sm flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center gap-2.5 text-xs sm:text-sm font-bold text-slate-700">
+                <span class="w-8 h-8 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center shrink-0">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </span>
+                <span>اضغط على أي بطاقة لسماع نطقها الواضح، أو استخدم زر إخفاء الترجمة لاختبار حفظك!</span>
+            </div>
+            <button type="button" id="toggle-ar-btn" onclick="toggleArabicMeanings()" class="audio-btn bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 shadow-sm">
+                <i class="fa-solid fa-eye-slash"></i>
+                <span id="toggle-ar-label">إخفاء الترجمة العربية</span>
+            </button>
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- القسم الأول: STORY LESSON (10 كلمات) -->
+        <!-- ========================================================= -->
+        <section class="bg-white rounded-3xl shadow-lg border-2 border-amber-200 overflow-hidden">
+            <div dir="ltr" class="bg-gradient-to-r from-amber-500 via-orange-500 to-purple-600 p-4 sm:px-6 flex flex-wrap items-center justify-between gap-3 text-white">
+                <div class="flex items-center gap-3 clickable-phrase" onclick="speakText('Story Lesson Vocabulary.')">
+                    <span class="bg-white text-orange-600 w-10 h-10 rounded-2xl flex items-center justify-center font-black text-lg shadow shrink-0">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                    </span>
+                    <div>
+                        <h1 class="en-text text-xl sm:text-2xl font-black tracking-wide text-yellow-100">STORY LESSON</h1>
+                        <span dir="rtl" class="text-xs text-amber-100 font-bold block">مفردات درس القصة • 10 كلمات مصوّرة وناطقة</span>
+                    </div>
+                </div>
+                <button type="button" dir="rtl" onclick="playSectionWords('story')" class="audio-btn ml-auto bg-white/25 hover:bg-white/35 text-white border border-white/40 px-4 py-2 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2 backdrop-blur-sm shadow">
+                    <i class="fa-solid fa-volume-high"></i>
+                    <span>استمع لكلمات القصة (10)</span>
+                </button>
+            </div>
+
+            <div dir="ltr" class="p-5 sm:p-7 bg-gradient-to-b from-amber-50/30 to-white">
+                <div id="story-vocab-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+                    <!-- يتم توليد بطاقات STORY LESSON الـ 10 برمجياً -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- القسم الثاني: LISTENING AND SPEAKING LESSON (12 كلمة) -->
+        <!-- ========================================================= -->
+        <section class="bg-white rounded-3xl shadow-lg border-2 border-sky-200 overflow-hidden">
+            <div dir="ltr" class="bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-600 p-4 sm:px-6 flex flex-wrap items-center justify-between gap-3 text-white">
+                <div class="flex items-center gap-3 clickable-phrase" onclick="speakText('Listening and Speaking Lesson Vocabulary.')">
+                    <span class="bg-white text-blue-700 w-10 h-10 rounded-2xl flex items-center justify-center font-black text-lg shadow shrink-0">
+                        <i class="fa-solid fa-headphones"></i>
+                    </span>
+                    <div>
+                        <h2 class="en-text text-xl sm:text-2xl font-black tracking-wide text-yellow-200">LISTENING AND SPEAKING LESSON</h2>
+                        <span dir="rtl" class="text-xs text-sky-100 font-bold block">مفردات درس الاستماع والتحدث • 12 كلمة مصوّرة وناطقة</span>
+                    </div>
+                </div>
+                <button type="button" dir="rtl" onclick="playSectionWords('listening')" class="audio-btn ml-auto bg-white/25 hover:bg-white/35 text-white border border-white/40 px-4 py-2 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2 backdrop-blur-sm shadow">
+                    <i class="fa-solid fa-volume-high"></i>
+                    <span>استمع لكلمات الاستماع والتحدث (12)</span>
+                </button>
+            </div>
+
+            <div dir="ltr" class="p-5 sm:p-7 bg-gradient-to-b from-sky-50/30 to-white">
+                <div id="listening-vocab-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+                    <!-- يتم توليد بطاقات LISTENING AND SPEAKING الـ 12 برمجياً -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- القسم الثالث: تحدي المفردات التفاعلي (Vocabulary Challenge) -->
+        <!-- ========================================================= -->
+        <section class="bg-white rounded-3xl shadow-lg border border-emerald-200 overflow-hidden">
+            <div class="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 p-4 sm:px-6 flex flex-wrap items-center justify-between gap-3 text-white">
+                <div class="flex items-center gap-3">
+                    <span class="w-9 h-9 rounded-full bg-white text-emerald-700 font-extrabold flex items-center justify-center text-lg shadow shrink-0">
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-extrabold">تحدي حفظ المفردات <span class="en-text">(Vocabulary Challenge)</span></h3>
+                        <p class="text-xs text-emerald-100 font-semibold">اقرأ المعنى العربي أو استمع للتلميح الصوتي واختر الكلمة الإنجليزية الصحيحة</p>
+                    </div>
+                </div>
+                <div class="bg-white/25 backdrop-blur-sm border border-white/40 text-white font-extrabold px-4 py-1.5 rounded-full text-sm">
+                    النقاط: <span id="quiz-score" class="text-yellow-200 en-text text-base">0</span>
+                </div>
+            </div>
+
+            <div class="p-6 text-center space-y-5 bg-gradient-to-b from-emerald-50/40 to-white">
+                <div class="bg-white border-2 border-emerald-200 rounded-2xl p-4 sm:p-5 max-w-xl mx-auto shadow-sm space-y-2">
+                    <span class="text-xs font-extrabold text-emerald-800 bg-emerald-100 px-3 py-0.5 rounded-full">ما هي الكلمة الإنجليزية التي تعني:</span>
+                    <div class="flex items-center justify-center gap-3 pt-1">
+                        <button type="button" onclick="speakCurrentQuizWord()" class="audio-btn w-10 h-10 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white flex items-center justify-center shadow shrink-0" title="استمع لتلميح النطق">
+                            <i class="fa-solid fa-volume-high text-sm"></i>
+                        </button>
+                        <p id="quiz-prompt-ar" class="text-2xl sm:text-3xl font-black text-slate-900">
+                            متوتر / عصبي
+                        </p>
+                    </div>
+                </div>
+
+                <div id="quiz-options" dir="ltr" class="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl mx-auto">
+                    <!-- خيارات الإجابة -->
+                </div>
+
+                <div id="quiz-feedback" class="hidden font-bold text-sm sm:text-base py-2.5 px-5 rounded-2xl max-w-md mx-auto"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- تذييل تعليمي -->
+    <footer class="max-w-6xl mx-auto px-4 pt-8 pb-4 text-center">
+        <div class="bg-white/85 border border-slate-200/80 rounded-2xl py-3 px-6 inline-flex flex-wrap items-center justify-center gap-3 shadow-sm text-xs sm:text-sm text-slate-600">
+            <span class="en-text font-extrabold text-teal-700 tracking-wide">LANGUA LEARN</span>
+            <span class="text-slate-300">•</span>
+            <span class="font-bold text-slate-700">جميع الحقوق محفوظة للأستاذ: ماجد سعد السويهري</span>
+        </div>
+    </footer>
+
+    <!-- ========================================================= -->
+    <!-- البرمجة التفاعلية ونظام الصوت التعليمي الهادئ -->
+    <!-- ========================================================= -->
+    <script>
+        // --- بيانات مفردات STORY LESSON (10 كلمات بالترتيب) ---
+        const storyVocabData = [
+            { id: 'nervous', en: 'nervous', speak: 'nervous', ar: 'متوتر / عصبي', badgeColor: 'bg-amber-600', borderColor: 'border-amber-200', tagBg: 'bg-amber-50 text-amber-800 border-amber-200' },
+            { id: 'paints', en: 'paints', speak: 'paints', ar: 'ألوان مائية / دهانات', badgeColor: 'bg-rose-600', borderColor: 'border-rose-200', tagBg: 'bg-rose-50 text-rose-800 border-rose-200' },
+            { id: 'haunted', en: 'haunted', speak: 'haunted', ar: 'مسكون', badgeColor: 'bg-purple-600', borderColor: 'border-purple-200', tagBg: 'bg-purple-50 text-purple-800 border-purple-200' },
+            { id: 'paint', en: 'paint', speak: 'paint', ar: 'يدهن / يلون', badgeColor: 'bg-sky-600', borderColor: 'border-sky-200', tagBg: 'bg-sky-50 text-sky-800 border-sky-200' },
+            { id: 'walkthrough', en: 'walk through', speak: 'walk through', ar: 'يمشي عبر', badgeColor: 'bg-slate-700', borderColor: 'border-slate-300', tagBg: 'bg-slate-100 text-slate-800 border-slate-300' },
+            { id: 'scream', en: 'scream', speak: 'scream', ar: 'يصرخ', badgeColor: 'bg-red-600', borderColor: 'border-red-200', tagBg: 'bg-red-50 text-red-800 border-red-200' },
+            { id: 'slide', en: 'Slide', speak: 'Slide', ar: 'زحليقة', badgeColor: 'bg-blue-600', borderColor: 'border-blue-200', tagBg: 'bg-blue-50 text-blue-800 border-blue-200' },
+            { id: 'hide', en: 'hide - hid', speak: 'hide, hid', ar: 'يختبئ - اختبأ', badgeColor: 'bg-emerald-600', borderColor: 'border-emerald-200', tagBg: 'bg-emerald-50 text-emerald-800 border-emerald-200' },
+            { id: 'raccoon', en: 'Raccoon', speak: 'Raccoon', ar: 'حيوان الراكون', badgeColor: 'bg-stone-700', borderColor: 'border-stone-300', tagBg: 'bg-stone-100 text-stone-800 border-stone-300' },
+            { id: 'shine', en: 'shine', speak: 'shine', ar: 'تشرق - تُنير', badgeColor: 'bg-yellow-500 text-slate-900', borderColor: 'border-yellow-300', tagBg: 'bg-yellow-50 text-amber-900 border-yellow-300' }
+        ];
+
+        // --- بيانات مفردات LISTENING AND SPEAKING LESSON (12 كلمة بالترتيب) ---
+        const listeningVocabData = [
+            { id: 'mars', en: 'Mars planet', speak: 'Mars planet', ar: 'كوكب المريخ', badgeColor: 'bg-red-600', borderColor: 'border-red-200', tagBg: 'bg-red-50 text-red-800 border-red-200' },
+            { id: 'earth', en: 'Earth', speak: 'Earth', ar: 'كوكب الأرض', badgeColor: 'bg-blue-600', borderColor: 'border-blue-200', tagBg: 'bg-blue-50 text-blue-800 border-blue-200' },
+            { id: 'astronaut', en: 'Astronaut', speak: 'Astronaut', ar: 'رجل فضاء', badgeColor: 'bg-indigo-600', borderColor: 'border-indigo-200', tagBg: 'bg-indigo-50 text-indigo-800 border-indigo-200' },
+            { id: 'space', en: 'Space', speak: 'Space', ar: 'مساحة فارغة - فضاء', badgeColor: 'bg-slate-800', borderColor: 'border-slate-300', tagBg: 'bg-slate-100 text-slate-800 border-slate-300' },
+            { id: 'zookeeper', en: 'Zookeeper', speak: 'Zookeeper', ar: 'حارس حديقة الحيوان', badgeColor: 'bg-amber-700', borderColor: 'border-amber-200', tagBg: 'bg-amber-50 text-amber-900 border-amber-200' },
+            { id: 'idea', en: 'Idea', speak: 'Idea', ar: 'فكرة', badgeColor: 'bg-yellow-500 text-slate-900', borderColor: 'border-yellow-300', tagBg: 'bg-yellow-50 text-amber-900 border-yellow-300' },
+            { id: 'hole', en: 'Hole', speak: 'Hole', ar: 'ثقب أو فتحة', badgeColor: 'bg-zinc-700', borderColor: 'border-zinc-300', tagBg: 'bg-zinc-100 text-zinc-800 border-zinc-300' },
+            { id: 'worms', en: 'Worms', speak: 'Worms', ar: 'ديدان', badgeColor: 'bg-lime-600', borderColor: 'border-lime-200', tagBg: 'bg-lime-50 text-lime-800 border-lime-200' },
+            { id: 'goodnews', en: 'Good news', speak: 'Good news', ar: 'أخبار جيدة', badgeColor: 'bg-emerald-600', borderColor: 'border-emerald-200', tagBg: 'bg-emerald-50 text-emerald-800 border-emerald-200' },
+            { id: 'diningroom', en: 'Dining room', speak: 'Dining room', ar: 'غرفة الطعام', badgeColor: 'bg-teal-600', borderColor: 'border-teal-200', tagBg: 'bg-teal-50 text-teal-800 border-teal-200' },
+            { id: 'hometheater', en: 'Home theater room', speak: 'Home theater room', ar: 'غرفة سينما بالمنزل', badgeColor: 'bg-rose-700', borderColor: 'border-rose-200', tagBg: 'bg-rose-50 text-rose-800 border-rose-200' },
+            { id: 'envy', en: 'envy', speak: 'envy', ar: 'يحسد', badgeColor: 'bg-orange-600', borderColor: 'border-orange-200', tagBg: 'bg-orange-50 text-orange-800 border-orange-200' }
+        ];
+
+        function getVocabSvg(id) {
+            switch (id) {
+                case 'nervous':
+                    return `<svg viewBox="0 0 220 250" preserveAspectRatio="xMidYMid meet" class="w-full h-full">
+                        <!-- خطوط التوتر السوداء المحيطة بالرأس -->
+                        <g stroke="#0f172a" stroke-width="3.5" stroke-linecap="round">
+                            <line x1="94" y1="8" x2="98" y2="22"/>
+                            <line x1="154" y1="10" x2="152" y2="24"/>
+                            <line x1="36" y1="36" x2="48" y2="44"/>
+                            <line x1="202" y1="48" x2="190" y2="56"/>
+                            <line x1="6" y1="106" x2="20" y2="105"/>
+                            <line x1="200" y1="112" x2="214" y2="111"/>
+                        </g>
+                        <!-- القميص الأصفر الفاتح والأكمام ذات الحواف البرتقالية -->
+                        <path d="M56,154 C48,162 46,184 44,210 L44,244 L170,244 L172,216 C182,196 184,174 172,158 C158,148 134,154 114,154 C92,154 68,144 56,154 Z" fill="#fef9a7" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"/>
+                        <!-- الحافة البرتقالية للكم الأيسر والأيمن -->
+                        <path d="M40,206 C48,194 68,188 82,194 L78,208 C64,204 52,210 46,222 C38,220 36,212 40,206 Z" fill="#f98b44" stroke="#0f172a" stroke-width="4.5" stroke-linejoin="round"/>
+                        <path d="M168,188 C178,186 190,192 194,204 L182,210 C176,202 168,198 160,200 Z" fill="#f98b44" stroke="#0f172a" stroke-width="4.5" stroke-linejoin="round"/>
+
+                        <!-- الشعر البني المتوسط المموج -->
+                        <path d="M88,44 C64,34 44,54 44,78 C36,92 20,104 20,122 C20,142 46,150 74,142 L156,148 C184,154 198,136 196,112 C194,94 176,82 168,66 C164,42 138,28 110,32 C98,34 90,38 88,44 Z" fill="#9c8070" stroke="#0f172a" stroke-width="5.5" stroke-linejoin="round"/>
+                        <!-- خطوط تفاصيل خصل الشعر -->
+                        <path d="M86,44 C86,58 96,74 118,74 C132,74 146,72 156,68" fill="none" stroke="#0f172a" stroke-width="4.5" stroke-linecap="round"/>
+                        <path d="M96,50 C102,62 114,70 128,72" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M68,94 C60,104 54,116 58,132" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M162,62 C166,74 174,84 180,94" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
+
+                        <!-- الوجه المتوتر والأذن -->
+                        <path d="M90,62 C104,74 134,76 150,72 C156,88 164,104 166,118 C172,118 176,126 172,134 C168,140 164,142 162,146 C158,162 134,166 108,166 C82,166 66,158 68,144 C70,136 62,128 58,118 C56,110 64,106 72,112 C74,94 82,76 90,62 Z" fill="#fcd5b5" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"/>
+
+                        <!-- الحاجبان القلقان والعيون المتسعة جداً -->
+                        <path d="M92,76 Q96,72 100,74" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M132,78 Q138,74 144,78" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
+                        <ellipse cx="104" cy="96" rx="16" ry="14" transform="rotate(-12 104 96)" fill="#ffffff" stroke="#0f172a" stroke-width="4.5"/>
+                        <circle cx="109" cy="94" r="6" fill="#0f172a"/>
+                        <circle cx="110" cy="93" r="2.2" fill="#ffffff"/>
+                        <ellipse cx="138" cy="94" rx="14" ry="15" transform="rotate(10 138 94)" fill="#ffffff" stroke="#0f172a" stroke-width="4.5"/>
+                        <circle cx="135" cy="94" r="6" fill="#0f172a"/>
+                        <circle cx="136" cy="93" r="2.2" fill="#ffffff"/>
+                        <!-- خطوط الهالات تحت العينين والأنف -->
+                        <path d="M84,108 Q98,118 112,112" fill="none" stroke="#0f172a" stroke-width="3.8" stroke-linecap="round"/>
+                        <path d="M136,112 Q148,116 156,106" fill="none" stroke="#0f172a" stroke-width="3.8" stroke-linecap="round"/>
+                        <path d="M114,114 C122,126 138,124 136,112" fill="none" stroke="#0f172a" stroke-width="4.2" stroke-linecap="round"/>
+
+                        <!-- الفم المشدود والأسنان البيضاء المطبقة -->
+                        <path d="M84,148 C88,132 118,126 152,134 C160,138 158,154 144,158 C122,162 88,160 84,148 Z" fill="#ffffff" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"/>
+                        <line x1="98" y1="138" x2="104" y2="156" stroke="#0f172a" stroke-width="3.2"/>
+                        <line x1="112" y1="134" x2="116" y2="156" stroke="#0f172a" stroke-width="3.2"/>
+                        <line x1="128" y1="134" x2="128" y2="156" stroke="#0f172a" stroke-width="3.2"/>
+                        <line x1="142" y1="136" x2="140" y2="155" stroke="#0f172a" stroke-width="3.2"/>
+
+                        <!-- اليدان والذراعان تقضم الأظافر بتوتر -->
+                        <path d="M56,244 L48,220 C46,210 66,196 86,184 C84,170 86,154 98,152 C104,150 110,152 114,156 C120,152 126,156 126,166 C128,180 124,196 112,202 L82,232 C72,240 62,246 56,244 Z" fill="#fcd5b5" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"/>
+                        <path d="M98,154 L94,174 M110,154 L106,174" stroke="#0f172a" stroke-width="3.8" stroke-linecap="round"/>
+
+                        <path d="M188,236 C198,228 194,206 184,194 C172,188 164,186 160,178 C166,164 160,148 148,148 C142,148 136,152 132,158 C126,156 124,166 130,178 C136,192 152,212 172,232 C178,238 184,238 188,236 Z" fill="#fcd5b5" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"/>
+                        <path d="M138,156 L146,174 M148,152 L156,170" stroke="#0f172a" stroke-width="3.8" stroke-linecap="round"/>
+                    </svg>`;
+                case 'paints':
+                    return `<svg viewBox="0 0 265 215" preserveAspectRatio="xMidYMid meet" class="w-full h-full">
+                        <!-- قاعدة وحافة لوحة الألوان الخشبية -->
+                        <path d="M136,12 C62,12 10,62 10,122 C10,174 62,208 128,208 C194,208 242,174 242,130 C242,102 222,90 212,78 C202,66 208,42 192,26 C178,14 158,12 136,12 Z" fill="#8c6239"/>
+                        <path d="M136,8 C62,8 10,58 10,118 C10,170 62,203 128,203 C194,203 242,170 242,126 C242,98 222,86 212,74 C202,62 208,38 192,22 C178,10 158,8 136,8 Z" fill="#c99c6e"/>
+                        <!-- فتحة الإبهام في اللوحة -->
+                        <circle cx="192" cy="134" r="19" fill="#8c6239"/>
+                        <circle cx="192" cy="136" r="17" fill="#ffffff"/>
+
+                        <!-- بقع الألوان الزاهية على اللوحة مع اللمعات والقطرات -->
+                        <!-- البرتقالي (أعلى الوسط) -->
+                        <path d="M98,26 C98,18 110,18 114,26 C118,18 128,22 126,32 C138,26 144,38 134,46 C140,56 130,66 122,60 C116,70 104,68 102,58 C92,68 82,58 88,48 C80,40 88,30 98,26 Z" fill="#fb923c" stroke="#ea580c" stroke-width="1.4"/>
+                        <path d="M94,38 Q98,32 104,34" fill="none" stroke="#fef08a" stroke-width="3" stroke-linecap="round"/>
+
+                        <!-- الأزرق الملكي (أعلى اليسار) -->
+                        <path d="M54,54 C62,44 76,52 72,64 C82,70 76,84 64,82 C54,84 44,82 40,74 C38,66 48,60 54,54 Z" fill="#2563eb" stroke="#1d4ed8" stroke-width="1.4"/>
+                        <circle cx="78" cy="62" r="4" fill="#2563eb"/>
+                        <path d="M50,64 Q54,58 60,56" fill="none" stroke="#93c5fd" stroke-width="2.6" stroke-linecap="round"/>
+
+                        <!-- التركواز (أعلى اليمين) -->
+                        <path d="M164,44 C172,34 184,40 182,52 C192,58 188,70 176,72 C178,80 166,82 160,72 C148,76 142,66 148,58 C142,48 154,44 164,44 Z" fill="#06b6d4" stroke="#0891b2" stroke-width="1.4"/>
+                        <circle cx="144" cy="56" r="3.5" fill="#06b6d4"/>
+                        <circle cx="186" cy="74" r="4" fill="#06b6d4"/>
+                        <path d="M158,52 Q164,46 170,46" fill="none" stroke="#a5f3fc" stroke-width="2.6" stroke-linecap="round"/>
+
+                        <!-- البنفسجي (اليسار) -->
+                        <path d="M36,106 C42,96 58,98 56,112 C66,118 62,132 48,132 C38,132 26,132 24,122 C22,114 32,112 36,106 Z" fill="#7c3aed" stroke="#6d28d9" stroke-width="1.4"/>
+                        <circle cx="62" cy="110" r="4" fill="#7c3aed"/>
+                        <path d="M34,116 Q38,110 44,108" fill="none" stroke="#ddd6fe" stroke-width="2.6" stroke-linecap="round"/>
+
+                        <!-- الأخضر التفاحي (الوسط) -->
+                        <path d="M88,116 C86,106 100,104 104,114 C112,104 122,110 116,120 C128,114 134,128 122,136 C128,148 114,156 104,148 C94,156 76,154 76,142 C70,134 78,122 88,116 Z" fill="#84cc16" stroke="#4d7c0f" stroke-width="1.4"/>
+                        <path d="M84,128 Q90,122 96,122" fill="none" stroke="#ecfccb" stroke-width="2.8" stroke-linecap="round"/>
+
+                        <!-- السماوي (أسفل اليسار) -->
+                        <path d="M44,150 C50,142 62,146 60,158 C66,166 56,174 44,170 C36,168 34,158 44,150 Z" fill="#38bdf8" stroke="#0284c7" stroke-width="1.2"/>
+
+                        <!-- الأحمر (أسفل الوسط اليسار) -->
+                        <path d="M94,166 C100,156 112,162 110,172 C118,178 110,188 102,186 C96,192 84,186 84,178 C80,172 88,168 94,166 Z" fill="#dc2626" stroke="#991b1b" stroke-width="1.3"/>
+
+                        <!-- الأصفر الذهبي (أسفل اليمين) -->
+                        <path d="M148,146 C158,136 172,144 166,156 C178,164 176,180 162,182 C164,194 150,196 142,186 C128,192 118,182 124,170 C118,158 134,154 148,146 Z" fill="#facc15" stroke="#eab308" stroke-width="1.4"/>
+                        <circle cx="174" cy="188" r="4.5" fill="#facc15" stroke="#eab308" stroke-width="1.2"/>
+                        <circle cx="122" cy="166" r="4" fill="#facc15" stroke="#eab308" stroke-width="1.2"/>
+                        <path d="M138,158 Q146,152 154,150" fill="none" stroke="#fef9c3" stroke-width="3" stroke-linecap="round"/>
+
+                        <!-- ظل الفرشاة الساقط على اللوحة -->
+                        <polygon points="48,186 214,82 208,74 44,178" fill="#6b4423" opacity="0.45"/>
+
+                        <!-- فرشاة الرسم الحمراء المائلة عبر اللوحة -->
+                        <path d="M102,138 L252,42 C256,40 258,42 254,46 L108,148 Z" fill="#dc2626" stroke="#7f1d1d" stroke-width="1.4" stroke-linejoin="round"/>
+                        <line x1="108" y1="142" x2="246" y2="48" stroke="#f87171" stroke-width="2" stroke-linecap="round"/>
+                        <!-- الطوق المعدني الفضي للفرشاة -->
+                        <polygon points="72,158 102,138 108,148 78,168" fill="#cbd5e1" stroke="#475569" stroke-width="1.4" stroke-linejoin="round"/>
+                        <line x1="76" y1="162" x2="104" y2="142" stroke="#ffffff" stroke-width="2"/>
+                        <!-- شعيرات الفرشاة المغموسة باللون الأزرق السماوي -->
+                        <path d="M72,158 C60,156 48,168 42,182 C56,184 72,180 78,168 Z" fill="#5c3a21" stroke="#3e2723" stroke-width="1.3"/>
+                        <path d="M62,162 C52,166 46,174 42,182 C56,184 68,180 74,172 C64,174 58,170 62,162 Z" fill="#06b6d4"/>
+                        <path d="M72,158 L88,147 C94,150 92,158 84,160 L78,168 Z" fill="#38bdf8" opacity="0.85"/>
+                    </svg>`;
+                case 'haunted':
+                    return `<svg viewBox="0 0 240 240" preserveAspectRatio="xMidYMid meet" class="w-full h-full">
+                        <defs>
+                            <radialGradient id="ghostBody3d" cx="45%" cy="28%" r="72%">
+                                <stop offset="0%" stop-color="#ffffff"/>
+                                <stop offset="55%" stop-color="#e8eef3"/>
+                                <stop offset="85%" stop-color="#b8c4ce"/>
+                                <stop offset="100%" stop-color="#8b9aa6"/>
+                            </radialGradient>
+                            <linearGradient id="ghostFoldShadow" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#94a3b8" stop-opacity="0.75"/>
+                                <stop offset="50%" stop-color="#ffffff" stop-opacity="0.2"/>
+                                <stop offset="100%" stop-color="#64748b" stop-opacity="0.65"/>
+                            </linearGradient>
+                        </defs>
+                        <!-- جسم الشبح الأبيض الفضي المتدفق ذو الطيات الناعمة -->
+                        <path d="M120,16 C82,16 64,46 62,92 C60,132 42,152 16,154 C14,158 24,164 28,168 C16,172 10,176 14,180 C24,184 26,192 38,194 C52,196 60,176 70,174 C72,188 62,198 48,200 C56,208 66,210 66,216 C68,228 90,234 106,226 C114,234 126,232 134,222 C146,212 154,206 160,214 C166,220 172,216 170,204 C184,208 198,202 204,192 C192,184 182,174 184,166 C198,176 212,182 224,176 C214,168 206,156 216,152 C230,152 232,142 220,136 C230,132 234,126 220,124 C202,122 184,104 176,78 C168,42 154,16 120,16 Z" fill="url(#ghostBody3d)"/>
+
+                        <!-- طيات وظلال القماش السفلية لإبراز العمق الثلاثي الأبعاد -->
+                        <path d="M78,92 C82,138 78,186 54,204 C66,212 88,182 96,136 C98,120 96,104 94,92 Z" fill="#94a3b8" opacity="0.4"/>
+                        <path d="M108,136 C106,178 96,214 78,226 C94,232 114,218 124,176 C128,158 128,144 126,134 Z" fill="#94a3b8" opacity="0.38"/>
+                        <path d="M142,102 C140,148 148,192 164,214 C172,208 164,174 162,142 C160,124 158,108 156,94 Z" fill="#94a3b8" opacity="0.42"/>
+                        <path d="M168,82 C176,122 194,158 218,176 C204,180 186,162 174,132 Z" fill="#64748b" opacity="0.35"/>
+
+                        <!-- لمعات بيضاء ناعمة على الرأس والطيات -->
+                        <path d="M84,48 C92,28 118,22 138,32 C146,36 148,48 136,54 C122,58 104,56 96,52 C88,58 84,66 84,48 Z" fill="#ffffff" opacity="0.9"/>
+                        <path d="M80,90 C84,134 80,178 66,204" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
+                        <path d="M146,96 C142,140 144,184 154,208" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" opacity="0.75"/>
+
+                        <!-- العينان السوداوان البيضاويتان الكبيرتان مع لمعة بيضاء -->
+                        <ellipse cx="102" cy="76" rx="12" ry="17" fill="#0f172a"/>
+                        <ellipse cx="98" cy="72" rx="2.6" ry="3.8" fill="#ffffff"/>
+                        <ellipse cx="138" cy="76" rx="12" ry="17" fill="#0f172a"/>
+                        <ellipse cx="134" cy="72" rx="2.6" ry="3.8" fill="#ffffff"/>
+
+                        <!-- الفم المفتوح المندهش مع اللسان الأحمر الصغير -->
+                        <path d="M120,104 C111,104 106,112 108,121 C110,127 116,127 120,126 C124,127 130,127 132,121 C134,112 129,104 120,104 Z" fill="#0f172a"/>
+                        <path d="M112,124 C115,116 125,116 128,124 C124,126 116,126 112,124 Z" fill="#ef4444"/>
+                    </svg>`;
+                case 'paint':
+                    return `<svg viewBox="0 0 260 245" preserveAspectRatio="xMidYMid meet" class="w-full h-full">
+                        <!-- الحامل الخشبي للوحة (Easel) في اليسار -->
+                        <g stroke="#0f172a" stroke-width="3.2" stroke-linejoin="round">
+                            <!-- الأرجل الخلفية والأمامية -->
+                            <polygon points="32,148 44,148 36,216 24,216" fill="#78592c"/>
+                            <polygon points="94,154 106,154 126,220 114,220" fill="#a6834c"/>
+                            <polygon points="48,162 60,162 64,238 50,238" fill="#a6834c"/>
+                            <!-- القائمان العلويان للحامل -->
+                            <rect x="44" y="34" width="12" height="22" fill="#a6834c"/>
+                            <rect x="68" y="32" width="12" height="22" fill="#a6834c"/>
+                            <!-- مسند اللوحة الجانبي -->
+                            <polygon points="14,66 28,62 48,148 36,152" fill="#78592c"/>
+                            <!-- اللوحة الصفراء الكريمية على الحامل -->
+                            <polygon points="28,54 98,44 114,140 44,156" fill="#fef08a"/>
+                            <polygon points="28,54 36,52 52,154 44,156" fill="#fde047"/>
+                            <!-- الألوان المرسومة على اللوحة (أحمر وأزرق وأصفر) -->
+                            <path d="M44,64 C54,54 66,64 78,56 C92,48 100,60 94,78 C98,92 104,104 102,118 C100,130 84,132 76,136 C64,146 52,144 52,126 C52,108 44,92 44,64 Z" fill="#ec525d" stroke="none"/>
+                            <path d="M60,72 C64,66 72,66 74,74 C80,74 84,82 78,88 C82,94 74,102 68,96 C64,104 54,102 56,92 C52,86 58,78 60,72 Z" fill="#3b82f6" stroke="none"/>
+                            <path d="M74,104 C80,96 88,98 88,108 C96,106 100,116 92,122 C96,130 86,136 78,130 C70,136 64,126 70,118 C64,114 68,104 74,104 Z" fill="#eab308" stroke="none"/>
+                            <!-- الرف السفلي الخشبي للحامل -->
+                            <polygon points="36,154 122,134 126,150 40,170" fill="#a6834c"/>
+                            <polygon points="36,154 40,170 30,152 26,144" fill="#78592c"/>
+                        </g>
+
+                        <!-- الطفل الرسام اللطيف على اليمين -->
+                        <!-- الأرجل والحذاءان البرتقاليان -->
+                        <rect x="162" y="198" width="22" height="18" fill="#fde6b2" stroke="#0f172a" stroke-width="3"/>
+                        <path d="M158,210 L186,210 L186,220 C176,224 162,224 156,218 Z" fill="#ea580c" stroke="#0f172a" stroke-width="3" stroke-linejoin="round"/>
+                        <path d="M156,216 C158,210 164,210 168,216 Z" fill="#fef08a" stroke="#0f172a" stroke-width="2.2"/>
+
+                        <rect x="192" y="202" width="24" height="20" fill="#fde6b2" stroke="#0f172a" stroke-width="3"/>
+                        <path d="M188,216 L218,216 L218,228 C206,232 192,232 186,224 Z" fill="#ea580c" stroke="#0f172a" stroke-width="3" stroke-linejoin="round"/>
+                        <path d="M186,222 C188,216 196,216 200,224 Z" fill="#fef08a" stroke="#0f172a" stroke-width="2.2"/>
+
+                        <!-- الشورت الأخضر الداكن -->
+                        <path d="M154,174 L222,174 L220,202 L182,206 L178,196 L154,196 Z" fill="#2c5259" stroke="#0f172a" stroke-width="3.2" stroke-linejoin="round"/>
+                        <!-- القميص الأزرق الفاتح والأكمام -->
+                        <path d="M152,114 L214,114 C226,118 234,130 232,142 L218,144 L222,176 L152,176 L154,142 L144,136 Z" fill="#7c98f8" stroke="#0f172a" stroke-width="3.2" stroke-linejoin="round"/>
+                        <rect x="196" y="162" width="24" height="6" fill="#fef08a" stroke="#0f172a" stroke-width="2"/>
+
+                        <!-- الذراع اليمنى الممدودة للرسم والفرشاة -->
+                        <path d="M152,118 C142,120 134,112 126,108 C118,104 114,112 122,118 C132,126 142,138 154,138 Z" fill="#fde6b2" stroke="#0f172a" stroke-width="3.2" stroke-linejoin="round"/>
+                        <!-- فرشاة الرسم في يد الطفل -->
+                        <g stroke="#0f172a" stroke-width="2.8" stroke-linejoin="round">
+                            <line x1="142" y1="104" x2="98" y2="122" stroke="#c49a6c" stroke-width="8" stroke-linecap="round"/>
+                            <line x1="142" y1="104" x2="98" y2="122" stroke="#0f172a" stroke-width="2.6" stroke-linecap="round" opacity="0"/>
+                            <path d="M144,101 L98,120 L102,126 L146,108 C149,106 147,100 144,101 Z" fill="#c49a6c"/>
+                            <path d="M98,120 C88,116 80,122 76,130 C84,136 96,136 102,126 Z" fill="#93a5f8"/>
+                            <path d="M76,130 C80,126 84,126 90,132 C84,135 78,134 76,130 Z" fill="#facc15"/>
+                        </g>
+
+                        <!-- الذراع اليسرى ولوحة الألوان البيضاء -->
+                        <path d="M214,142 L230,142 C232,154 224,164 206,162 Z" fill="#fde6b2" stroke="#0f172a" stroke-width="3"/>
+                        <path d="M188,128 C164,126 144,146 146,162 C148,176 176,174 198,162 C214,152 218,136 208,130 C200,126 194,134 190,136 C188,132 192,128 188,128 Z" fill="#f1f5f9" stroke="#0f172a" stroke-width="3.2" stroke-linejoin="round"/>
+                        <!-- نقاط الألوان على لوحة الطفل -->
+                        <circle cx="158" cy="148" r="4" fill="#3b82f6" stroke="#0f172a" stroke-width="1.8"/>
+                        <circle cx="158" cy="160" r="5" fill="#facc15" stroke="#0f172a" stroke-width="1.8"/>
+                        <circle cx="176" cy="162" r="5.5" fill="#ec525d" stroke="#0f172a" stroke-width="1.8"/>
+                        <circle cx="194" cy="154" r="4.8" fill="#2dd4bf" stroke="#0f172a" stroke-width="1.8"/>
+                        <circle cx="202" cy="142" r="4.5" fill="#7dd3fc" stroke="#0f172a" stroke-width="1.8"/>
+                        <circle cx="174" cy="138" r="4.5" fill="#fde6b2" stroke="#0f172a" stroke-width="2"/>
+
+                        <!-- الرأس والشعر البني الكثيف -->
+                        <path d="M140,60 C138,40 162,24 190,26 C222,28 242,48 242,74 C242,96 226,118 188,118 C154,118 138,100 140,60 Z" fill="#fde6b2" stroke="#0f172a" stroke-width="3.4"/>
+                        <!-- الأذن اليمنى -->
+                        <path d="M226,78 C238,74 246,84 240,94 C236,102 226,102 222,98" fill="#fde6b2" stroke="#0f172a" stroke-width="3.2" stroke-linecap="round"/>
+                        <path d="M228,88 C232,84 236,88 232,94" fill="none" stroke="#0f172a" stroke-width="2.4" stroke-linecap="round"/>
+                        <!-- الشعر البني المجعد -->
+                        <path d="M138,66 C126,64 122,46 134,38 C128,22 146,12 166,18 C170,6 196,6 218,18 C224,10 232,14 228,24 C238,20 244,26 234,32 C248,44 252,70 244,82 C238,74 228,74 224,80 C216,78 214,68 218,62 C204,64 202,52 206,46 C192,56 178,52 182,42 C168,54 152,54 156,42 C148,54 142,58 138,66 Z" fill="#926f4e" stroke="#0f172a" stroke-width="3.4" stroke-linejoin="round"/>
+                        <!-- العيون اللطيفة والحاجبان والابتسامة -->
+                        <path d="M148,60 Q154,56 158,62" fill="none" stroke="#0f172a" stroke-width="2.6" stroke-linecap="round"/>
+                        <path d="M180,60 Q188,56 196,60" fill="none" stroke="#0f172a" stroke-width="2.6" stroke-linecap="round"/>
+                        <circle cx="154" cy="76" r="7.5" fill="#0f172a"/>
+                        <circle cx="156" cy="73.5" r="2.6" fill="#ffffff"/>
+                        <circle cx="190" cy="76" r="7.5" fill="#0f172a"/>
+                        <circle cx="192" cy="73.5" r="2.6" fill="#ffffff"/>
+                        <path d="M162,88 Q169,83 176,88" fill="none" stroke="#0f172a" stroke-width="2.6" stroke-linecap="round"/>
+                        <path d="M160,98 Q172,106 184,98" fill="none" stroke="#0f172a" stroke-width="2.8" stroke-linecap="round"/>
+                    </svg>`;
+                case 'walkthrough':
+                    return `<svg viewBox="0 0 280 205" preserveAspectRatio="xMidYMid meet" class="w-full h-full">
+                        <!-- الأرضية الفيروزية البيضاوية -->
+                        <ellipse cx="144" cy="176" rx="102" ry="18" fill="#9ac7be"/>
+
+                        <!-- الأشجار الخضراء في الخلفية (شجرتان يسار وشجرة يمين) -->
+                        <g>
+                            <circle cx="30" cy="116" r="14" fill="#4eb879"/>
+                            <circle cx="22" cy="128" r="12" fill="#4eb879"/>
+                            <circle cx="38" cy="130" r="12" fill="#4eb879"/>
+                            <path d="M27,160 L30,132 L33,160 Z" fill="#a67c52"/>
+                            <circle cx="56" cy="130" r="11" fill="#7bd389"/>
+                            <circle cx="49" cy="140" r="9" fill="#7bd389"/>
+                            <circle cx="62" cy="140" r="9" fill="#7bd389"/>
+                            <path d="M54,160 L56,142 L58,160 Z" fill="#a67c52"/>
+                            <circle cx="250" cy="116" r="14" fill="#4eb879"/>
+                            <circle cx="242" cy="128" r="12" fill="#4eb879"/>
+                            <circle cx="258" cy="130" r="12" fill="#4eb879"/>
+                            <path d="M247,160 L250,132 L253,160 Z" fill="#a67c52"/>
+                        </g>
+
+                        <!-- الشخصية الأولى (المرأة تمشي ببدلة رياضية وردية) -->
+                        <g>
+                            <!-- الساقان الرماديتان والحذاءان الورديان -->
+                            <polygon points="90,122 104,122 126,162 116,170 92,138" fill="#94a3b8" stroke="#334155" stroke-width="1.8" stroke-linejoin="round"/>
+                            <path d="M116,168 L128,162 C132,168 130,178 120,180 C112,180 110,172 116,168 Z" fill="#e8a8e0" stroke="#334155" stroke-width="1.8"/>
+                            <polygon points="104,120 118,120 94,172 80,166" fill="#94a3b8" stroke="#334155" stroke-width="1.8" stroke-linejoin="round"/>
+                            <line x1="112" y1="124" x2="92" y2="168" stroke="#ffffff" stroke-width="1.5"/>
+                            <path d="M72,162 C78,160 88,166 94,172 L90,180 L68,174 C64,170 66,164 72,162 Z" fill="#e8a8e0" stroke="#334155" stroke-width="1.8" stroke-linejoin="round"/>
+
+                            <!-- الذراع اليسرى الخلفية والسترة الوردية -->
+                            <path d="M114,68 L134,76 L142,98 L130,102 L122,86 L112,82 Z" fill="#eb6bc9" stroke="#334155" stroke-width="1.8" stroke-linejoin="round"/>
+                            <circle cx="138" cy="106" r="6" fill="#fde1c8" stroke="#334155" stroke-width="1.8"/>
+                            <path d="M88,68 C96,62 110,62 116,68 L122,120 L82,124 Z" fill="#eb6bc9" stroke="#334155" stroke-width="1.8" stroke-linejoin="round"/>
+                            <line x1="98" y1="74" x2="98" y2="122" stroke="#ffffff" stroke-width="1.8"/>
+
+                            <!-- الذراع اليمنى المرفوعة للأمام -->
+                            <path d="M90,72 L76,84 L64,70 L56,78 L72,96 L92,88 Z" fill="#eb6bc9" stroke="#334155" stroke-width="1.8" stroke-linejoin="round"/>
+                            <circle cx="58" cy="70" r="6" fill="#fde1c8" stroke="#334155" stroke-width="1.8"/>
+
+                            <!-- المنشفة الصفراء حول الرقبة -->
+                            <path d="M88,64 L94,64 L92,84 L84,84 Z" fill="#fef08a" stroke="#334155" stroke-width="1.6"/>
+                            <path d="M104,64 L112,64 L110,84 L102,84 Z" fill="#fef08a" stroke="#334155" stroke-width="1.6"/>
+
+                            <!-- الرأس والشعر البني وذيل الحصان -->
+                            <path d="M108,24 C116,20 124,30 124,40 C118,42 112,38 110,32 Z" fill="#6e5043" stroke="#334155" stroke-width="1.8"/>
+                            <circle cx="96" cy="44" r="19" fill="#fde1c8" stroke="#334155" stroke-width="1.8"/>
+                            <path d="M77,46 C76,26 102,16 114,30 C118,38 116,50 110,56 C108,46 106,40 100,40 C94,38 88,36 84,32 C80,38 78,42 77,46 Z" fill="#6e5043" stroke="#334155" stroke-width="1.8" stroke-linejoin="round"/>
+                            <line x1="88" y1="44" x2="88" y2="49" stroke="#334155" stroke-width="2.2" stroke-linecap="round"/>
+                            <line x1="99" y1="44" x2="99" y2="49" stroke="#334155" stroke-width="2.2" stroke-linecap="round"/>
+                            <path d="M89,55 Q94,60 99,55" fill="none" stroke="#334155" stroke-width="1.8" stroke-linecap="round"/>
+                        </g>
+
+                        <!-- الشخصية الثانية (الرجل يمشي ببدلة رياضية زرقاء) -->
+                        <g>
+                            <!-- الساقان الداكنتان والحذاءان أبيضا اللون -->
+                            <polygon points="180,118 196,118 222,162 210,170 182,136" fill="#475569" stroke="#1e293b" stroke-width="1.8" stroke-linejoin="round"/>
+                            <path d="M210,168 L222,160 C226,168 224,180 214,182 C204,182 202,172 210,168 Z" fill="#ffffff" stroke="#1e293b" stroke-width="1.8"/>
+                            <polygon points="196,116 212,116 186,174 170,168" fill="#475569" stroke="#1e293b" stroke-width="1.8" stroke-linejoin="round"/>
+                            <line x1="205" y1="120" x2="184" y2="170" stroke="#94a3b8" stroke-width="1.5"/>
+                            <path d="M160,164 C168,162 178,168 184,174 L180,182 L156,176 C152,172 154,166 160,164 Z" fill="#ffffff" stroke="#1e293b" stroke-width="1.8" stroke-linejoin="round"/>
+
+                            <!-- الذراع اليسرى والسترة الزرقاء -->
+                            <path d="M206,58 L228,68 L238,94 L224,98 L216,80 L204,74 Z" fill="#029ae4" stroke="#1e293b" stroke-width="1.8" stroke-linejoin="round"/>
+                            <circle cx="232" cy="102" r="6.5" fill="#fde1c8" stroke="#1e293b" stroke-width="1.8"/>
+                            <path d="M176,58 C186,52 202,52 208,58 L216,116 L172,120 Z" fill="#029ae4" stroke="#1e293b" stroke-width="1.8" stroke-linejoin="round"/>
+                            <line x1="190" y1="64" x2="190" y2="118" stroke="#ffffff" stroke-width="1.8"/>
+
+                            <!-- الذراع اليمنى المرفوعة للأمام -->
+                            <path d="M180,62 L166,76 L154,66 L146,74 L166,90 L184,82 Z" fill="#029ae4" stroke="#1e293b" stroke-width="1.8" stroke-linejoin="round"/>
+                            <circle cx="148" cy="68" r="6.5" fill="#fde1c8" stroke="#1e293b" stroke-width="1.8"/>
+
+                            <!-- المنشفة البيضاء حول الرقبة -->
+                            <path d="M178,56 L186,56 L184,80 L172,80 Z" fill="#ffffff" stroke="#1e293b" stroke-width="1.6"/>
+                            <path d="M196,56 L206,56 L204,80 L194,80 Z" fill="#ffffff" stroke="#1e293b" stroke-width="1.6"/>
+
+                            <!-- الرأس والشعر البني القصير -->
+                            <circle cx="188" cy="36" r="19" fill="#fde1c8" stroke="#1e293b" stroke-width="1.8"/>
+                            <path d="M170,32 C170,12 206,8 208,34 C206,42 204,44 200,40 C198,32 194,24 186,20 C180,26 174,30 170,32 Z" fill="#4a372f" stroke="#1e293b" stroke-width="1.8" stroke-linejoin="round"/>
+                            <line x1="178" y1="36" x2="178" y2="41" stroke="#1e293b" stroke-width="2.2" stroke-linecap="round"/>
+                            <line x1="190" y1="36" x2="190" y2="41" stroke="#1e293b" stroke-width="2.2" stroke-linecap="round"/>
+                            <path d="M175,30 L181,33 M193,30 L188,33" stroke="#1e293b" stroke-width="1.6" stroke-linecap="round"/>
+                            <path d="M180,46 Q185,51 190,46" fill="none" stroke="#1e293b" stroke-width="1.8" stroke-linecap="round"/>
+                        </g>
+                    </svg>`;
+                case 'scream':
+                    return `<svg viewBox="0 0 265 250" preserveAspectRatio="xMidYMid meet" class="w-full h-full">
+                        <!-- ظل أرضي ناعم -->
+                        <ellipse cx="102" cy="232" rx="38" ry="8" fill="#cbd5e1"/>
+
+                        <!-- خطوط الصراخ السوداء المتجهة نحو اليمين -->
+                        <g stroke="#0f172a" stroke-width="2.6" stroke-linecap="round">
+                            <line x1="184" y1="48" x2="218" y2="28"/>
+                            <line x1="194" y1="62" x2="246" y2="42"/>
+                            <line x1="202" y1="76" x2="254" y2="70"/>
+                            <line x1="206" y1="90" x2="250" y2="96"/>
+                            <line x1="198" y1="106" x2="232" y2="118"/>
+                            <line x1="176" y1="120" x2="208" y2="142"/>
+                        </g>
+
+                        <!-- الساقان الرفيعتان والحذاءان -->
+                        <rect x="82" y="186" width="8" height="36" fill="#fde0c5" stroke="#0f172a" stroke-width="2.2"/>
+                        <rect x="96" y="186" width="8" height="36" fill="#fde0c5" stroke="#0f172a" stroke-width="2.2"/>
+                        <path d="M78,218 C76,228 84,234 94,232 C102,230 100,222 92,220 Z" fill="#f4a97d" stroke="#0f172a" stroke-width="2.2"/>
+                        <path d="M92,216 C92,226 100,232 110,230 C116,228 112,220 104,218 Z" fill="#f4a97d" stroke="#0f172a" stroke-width="2.2"/>
+
+                        <!-- التنورة البنفسجية -->
+                        <path d="M56,158 C56,184 82,194 102,188 L88,162 Z" fill="#7e57c2" stroke="#0f172a" stroke-width="2.4" stroke-linejoin="round"/>
+
+                        <!-- الذراع اليسرى الممتدة والأصابع المفرودة -->
+                        <path d="M84,142 L56,164 L44,154 L46,166 L34,158 L42,170 L28,168 L42,176 L34,184 L50,180 L60,186 L62,178 L88,154 Z" fill="#fde0c5" stroke="#0f172a" stroke-width="2.2" stroke-linejoin="round"/>
+                        <!-- الذراع اليمنى الممتدة للأمام -->
+                        <path d="M126,138 L152,168 L160,142 L158,162 L172,152 L162,168 L178,162 L162,174 L174,174 L154,180 L146,182 L120,146 Z" fill="#fde0c5" stroke="#0f172a" stroke-width="2.2" stroke-linejoin="round"/>
+
+                        <!-- القميص الوردي المشرق بأكمام قصيرة وياقة -->
+                        <path d="M108,124 C96,124 84,132 76,144 L88,154 L72,168 C78,180 92,186 104,184 L124,146 L132,148 L138,136 C132,126 122,122 108,124 Z" fill="#ec4899" stroke="#0f172a" stroke-width="2.4" stroke-linejoin="round"/>
+                        <path d="M110,126 L108,154 L120,126" fill="#fde0c5" stroke="#0f172a" stroke-width="2"/>
+                        <circle cx="106" cy="162" r="2" fill="#0f172a"/>
+                        <circle cx="100" cy="172" r="2" fill="#0f172a"/>
+
+                        <!-- الرقبة والضفائر البرتقالية المتطايرة بشدة -->
+                        <path d="M114,104 L110,126 L124,126 L134,114 Z" fill="#fde0c5" stroke="#0f172a" stroke-width="2.2"/>
+                        <!-- الضفيرة البرتقالية اليسرى الكبيرة المتطايرة -->
+                        <path d="M90,72 L16,42 L56,66 L22,64 L54,78 L24,84 L58,86 L28,100 L66,94 L38,118 L74,98 L62,124 L82,100 L72,122 L92,84 Z" fill="#f97316" stroke="#0f172a" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M84,74 L34,56 M82,80 L38,78 M82,86 L46,96" stroke="#fed7aa" stroke-width="2.5" stroke-linecap="round"/>
+                        <!-- الضفيرة البرتقالية اليمنى العلوية -->
+                        <path d="M158,42 L176,18 L174,36 L192,24 L182,40 L204,36 L184,48 L198,52 L166,52 Z" fill="#f97316" stroke="#0f172a" stroke-width="2" stroke-linejoin="round"/>
+
+                        <!-- الرأس المائل للأعلى أثناء الصراخ -->
+                        <path d="M94,76 C88,52 114,32 146,36 C172,40 184,68 182,92 C180,114 152,124 128,118 C114,114 106,104 104,96 C94,104 88,92 94,76 Z" fill="#fde0c5" stroke="#0f172a" stroke-width="2.6" stroke-linejoin="round"/>
+                        <!-- الشعر البرتقالي أعلى الرأس والربطة الوردية -->
+                        <path d="M94,74 C90,54 104,42 122,42 C110,54 104,64 102,78 Z" fill="#f97316" stroke="#0f172a" stroke-width="2"/>
+                        <ellipse cx="96" cy="74" rx="4" ry="7" transform="rotate(-24 96 74)" fill="#f472b6" stroke="#0f172a" stroke-width="1.8"/>
+                        <!-- الخد الوردي -->
+                        <ellipse cx="118" cy="84" rx="10" ry="12" transform="rotate(14 118 84)" fill="#f4a4a4" opacity="0.8"/>
+
+                        <!-- العيون المتسعة والحاجبان المرتفعان -->
+                        <path d="M110,42 Q112,34 118,34" fill="none" stroke="#0f172a" stroke-width="2.2" stroke-linecap="round"/>
+                        <path d="M138,30 Q144,24 148,30" fill="none" stroke="#0f172a" stroke-width="2.2" stroke-linecap="round"/>
+                        <ellipse cx="126" cy="50" rx="11" ry="12" transform="rotate(-14 126 50)" fill="#ffffff" stroke="#0f172a" stroke-width="2.4"/>
+                        <circle cx="131" cy="48" r="3" fill="#0f172a"/>
+                        <ellipse cx="148" cy="44" rx="10" ry="10.5" transform="rotate(-10 148 44)" fill="#ffffff" stroke="#0f172a" stroke-width="2.4"/>
+                        <circle cx="143" cy="44" r="2.8" fill="#0f172a"/>
+
+                        <!-- الفم المفتوح على وسعه يصرخ مع الأسنان واللسان -->
+                        <path d="M132,70 L166,58 C176,74 178,94 172,102 C164,108 152,110 146,106 Z" fill="#6b1d1d" stroke="#0f172a" stroke-width="2.6" stroke-linejoin="round"/>
+                        <!-- الأسنان العلوية والسفلية -->
+                        <path d="M144,65 C146,70 150,70 152,64 C154,68 158,68 159,61 Z" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
+                        <path d="M158,104 C158,98 164,98 164,102 C166,97 171,97 170,101 Z" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
+                        <!-- اللسان الوردي داخل الفم -->
+                        <path d="M148,92 C148,84 156,82 158,88 C158,94 152,96 148,92 Z" fill="#ef4444" stroke="#0f172a" stroke-width="1.5"/>
+                    </svg>`;
+                case 'slide':
+                    return `<svg viewBox="0 0 245 265" preserveAspectRatio="xMidYMid meet" class="w-full h-full">
+                        <!-- بقعة العشب الأخضر الأرضية -->
+                        <path d="M14,234 C-2,238 4,248 26,252 C56,260 104,262 152,258 C194,254 226,246 238,238 C246,232 234,224 212,222 C226,216 218,206 184,204 C144,202 88,208 54,218 C32,224 24,228 14,234 Z" fill="#84cc16" stroke="#0f172a" stroke-width="2.5" stroke-linejoin="round"/>
+
+                        <!-- السلم الرمادي المعدني على اليمين -->
+                        <g stroke="#0f172a" stroke-width="2.2" stroke-linejoin="round">
+                            <polygon points="154,68 162,68 176,240 168,240" fill="#e5e7eb"/>
+                            <polygon points="174,80 182,80 192,246 184,246" fill="#e5e7eb"/>
+                            <!-- درجات السلم العشر -->
+                            <rect x="163" y="96" width="14" height="5" fill="#d1d5db"/>
+                            <rect x="164" y="112" width="14" height="5" fill="#d1d5db"/>
+                            <rect x="165" y="128" width="14" height="5" fill="#d1d5db"/>
+                            <rect x="166" y="144" width="14" height="5" fill="#d1d5db"/>
+                            <rect x="168" y="160" width="14" height="5" fill="#d1d5db"/>
+                            <rect x="169" y="176" width="14" height="5" fill="#d1d5db"/>
+                            <rect x="170" y="192" width="14" height="5" fill="#d1d5db"/>
+                            <rect x="171" y="208" width="14" height="5" fill="#d1d5db"/>
+                            <rect x="173" y="224" width="14" height="5" fill="#d1d5db"/>
+                            <!-- قوائم الزحليقة السفلية اليسرى -->
+                            <rect x="38" y="218" width="8" height="22" fill="#e5e7eb"/>
+                            <rect x="54" y="232" width="8" height="20" fill="#e5e7eb"/>
+                        </g>
+
+                        <!-- الجانب الخلفي الأزرق للزحليقة والدرابزين الخلفي -->
+                        <path d="M138,68 L156,54 L172,72 L166,76 L154,62 L144,72 Z" fill="#e5e7eb" stroke="#0f172a" stroke-width="2.2" stroke-linejoin="round"/>
+                        <path d="M24,214 C46,200 72,172 94,142 L152,62 L168,74 L48,226 Z" fill="#0077b6" stroke="#0f172a" stroke-width="2.6" stroke-linejoin="round"/>
+                        <!-- سطح الانزلاق الرمادي الفاتح -->
+                        <path d="M36,222 C60,204 86,174 108,142 L156,76 C164,70 174,72 178,80 L58,236 Z" fill="#e5e7eb" stroke="#0f172a" stroke-width="2.4" stroke-linejoin="round"/>
+
+                        <!-- الطفل المنزلق على الزحليقة -->
+                        <!-- الذراع الخلفية اليسرى -->
+                        <path d="M110,78 L96,98 L88,100 L96,104 L91,110 L98,108 L96,115 L102,110 L114,96 Z" fill="#f3cfa7" stroke="#0f172a" stroke-width="2.2" stroke-linejoin="round"/>
+                        <!-- البنطال الأزرق الجينز والحذاءان الأسودان -->
+                        <path d="M108,104 L138,120 L108,162 L82,146 Z" fill="#3b6d9c" stroke="#0f172a" stroke-width="2.4" stroke-linejoin="round"/>
+                        <line x1="122" y1="112" x2="94" y2="152" stroke="#0f172a" stroke-width="2.2"/>
+                        <!-- الحذاء الأيسر والأيمن -->
+                        <path d="M84,136 C78,134 72,140 76,146 L86,154 L96,144 Z" fill="#1e293b" stroke="#0f172a" stroke-width="2.2"/>
+                        <path d="M75,144 L86,154" stroke="#ffffff" stroke-width="2"/>
+                        <path d="M96,144 C90,142 84,148 88,154 L104,164 L112,154 Z" fill="#1e293b" stroke="#0f172a" stroke-width="2.2"/>
+                        <path d="M87,152 L104,164" stroke="#ffffff" stroke-width="2"/>
+                        <!-- القميص البرتقالي -->
+                        <path d="M114,62 L140,62 L150,104 L136,120 L108,104 Z" fill="#f97316" stroke="#0f172a" stroke-width="2.4" stroke-linejoin="round"/>
+                        <!-- الذراع الأمامية اليمنى المفتوحة الأصابع -->
+                        <path d="M134,74 L148,84 L134,108 L134,118 L128,124 L125,118 L120,126 L118,118 L113,124 L114,114 L108,116 L116,104 L126,86 Z" fill="#f3cfa7" stroke="#0f172a" stroke-width="2.2" stroke-linejoin="round"/>
+                        <path d="M134,72 L148,82 L140,94 L124,84 Z" fill="#f97316" stroke="#0f172a" stroke-width="2.2" stroke-linejoin="round"/>
+
+                        <!-- الرأس المستدير والشعر البني الشائك وملامح الوجه -->
+                        <circle cx="98" cy="36" r="5" fill="#f3cfa7" stroke="#0f172a" stroke-width="2"/>
+                        <circle cx="154" cy="36" r="5" fill="#f3cfa7" stroke="#0f172a" stroke-width="2"/>
+                        <ellipse cx="126" cy="36" rx="28" ry="26" fill="#f3cfa7" stroke="#0f172a" stroke-width="2.4"/>
+                        <!-- الشعر البني الشائك أعلى الرأس -->
+                        <path d="M98,34 C96,24 102,16 108,14 L106,10 L114,12 L114,6 L122,10 L126,4 L132,10 L140,7 L140,13 L148,11 L146,18 C152,22 154,28 154,34 C146,24 138,24 132,20 L126,24 L120,20 L112,24 L106,22 Z" fill="#5c3a21" stroke="#0f172a" stroke-width="2.2" stroke-linejoin="round"/>
+                        <!-- الخدود الوردية والعيون والابتسامة -->
+                        <circle cx="116" cy="40" r="4.5" fill="#fda4af" opacity="0.55"/>
+                        <circle cx="136" cy="40" r="4.5" fill="#fda4af" opacity="0.55"/>
+                        <circle cx="121" cy="34" r="1.8" fill="#0f172a"/>
+                        <circle cx="131" cy="34" r="1.8" fill="#0f172a"/>
+                        <path d="M119,30 Q121,28 123,30 M129,30 Q131,28 133,30" fill="none" stroke="#0f172a" stroke-width="1.4" stroke-linecap="round"/>
+                        <path d="M123,39 Q126,36 129,39" fill="none" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round"/>
+                        <path d="M120,44 Q126,50 132,44" fill="none" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round"/>
+                        <path d="M124,58 Q126,60 128,58" fill="none" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round"/>
+
+                        <!-- الجانب الأمامي الأزرق للزحليقة والدرابزين الأمامي -->
+                        <path d="M132,80 L164,54 L182,78 L176,82 L162,64 L138,84 L152,104 L146,108 Z" fill="#e5e7eb" stroke="#0f172a" stroke-width="2.2" stroke-linejoin="round"/>
+                        <path d="M44,232 C68,214 96,184 120,152 L176,74 C182,70 188,78 186,86 L62,244 C56,248 48,242 44,232 Z" fill="#0077b6" stroke="#0f172a" stroke-width="2.6" stroke-linejoin="round"/>
+
+                        <!-- خصلات العشب الصغيرة حول القوائم -->
+                        <path d="M28,246 Q32,232 38,244 M62,250 Q66,236 72,248 M164,244 Q168,228 174,242 M186,248 Q190,234 196,246" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+                    </svg>`;
+                case 'hide':
+                    return `<svg viewBox="0 0 260 250" preserveAspectRatio="xMidYMid meet" class="w-full h-full rounded-xl">
+                        <!-- السماء الزرقاء الفاتحة -->
+                        <rect x="0" y="0" width="260" height="250" fill="#e0f7ff"/>
+                        <!-- أوراق الشجرة الخضراء الكثيفة في الأعلى -->
+                        <path d="M0,0 L260,0 L260,64 C244,74 222,74 206,62 C190,74 166,74 150,64 C132,74 114,68 106,52 C88,54 74,46 66,34 C46,42 26,32 20,14 C10,12 4,8 0,0 Z" fill="#52b748"/>
+                        <path d="M12,0 L260,0 L260,48 C242,58 218,54 204,44 C186,56 158,54 142,42 C122,52 98,42 88,28 C68,32 46,24 38,10 Z" fill="#70cc52"/>
+
+                        <!-- التلة الخضراء الأرضية والشجيرات في الخلفية -->
+                        <path d="M0,192 Q130,174 260,204 L260,250 L0,250 Z" fill="#bef264"/>
+                        <path d="M0,214 Q130,186 260,216 L260,250 L0,250 Z" fill="#8fd14f"/>
+                        <!-- شجيرة يسار ووسط ويمين -->
+                        <circle cx="24" cy="166" r="14" fill="#52b748"/>
+                        <circle cx="14" cy="176" r="10" fill="#52b748"/>
+                        <circle cx="34" cy="176" r="10" fill="#52b748"/>
+                        <path d="M22,196 L24,174 L26,196 Z" fill="#9c6b43"/>
+                        <circle cx="164" cy="176" r="11" fill="#70cc52"/>
+                        <circle cx="155" cy="182" r="8" fill="#70cc52"/>
+                        <circle cx="173" cy="182" r="8" fill="#70cc52"/>
+                        <rect x="162" y="182" width="4" height="8" fill="#9c6b43"/>
+
+                        <!-- ظل الولد والشجرة -->
+                        <ellipse cx="86" cy="228" rx="46" ry="12" fill="#76b83e"/>
+                        <ellipse cx="204" cy="218" rx="56" ry="16" fill="#76b83e"/>
+
+                        <!-- الفتاة المختبئة خلف جذع الشجرة (يمين) -->
+                        <g>
+                            <!-- الساق والتنورة البرتقالية والقميص البنفسجي -->
+                            <rect x="196" y="178" width="7" height="16" fill="#fde0b8"/>
+                            <path d="M192,164 L208,164 L210,180 L190,178 Z" fill="#f97316"/>
+                            <path d="M184,142 L208,140 L208,166 L192,166 Z" fill="#c04ea0"/>
+                            <!-- الشعر الأسود الطويل والفيونكة المرجانية -->
+                            <path d="M158,104 C150,118 156,140 162,154 L188,150 L200,136 L194,94 C180,88 164,92 158,104 Z" fill="#0f172a"/>
+                            <!-- الوجه المستدير اللطيف للفتاة -->
+                            <circle cx="182" cy="122" r="22" fill="#fde0b8"/>
+                            <path d="M160,114 C166,94 190,90 198,108 C186,116 172,118 160,114 Z" fill="#0f172a"/>
+                            <!-- فيونكة برتقالية مرجانية -->
+                            <circle cx="164" cy="116" r="3" fill="#fb7185"/>
+                            <ellipse cx="160" cy="115" rx="4" ry="2.2" transform="rotate(-20 160 115)" fill="#fb7185"/>
+                            <ellipse cx="166" cy="112" rx="4" ry="2.2" transform="rotate(-55 166 112)" fill="#fb7185"/>
+                            <!-- خدود وعيون وابتسامة الفتاة -->
+                            <circle cx="176" cy="134" r="4" fill="#fda4af" opacity="0.55"/>
+                            <circle cx="176" cy="126" r="1.6" fill="#0f172a"/>
+                            <circle cx="192" cy="120" r="1.6" fill="#0f172a"/>
+                            <path d="M186,134 Q191,132 194,129 C196,134 192,139 188,138 Z" fill="#881337"/>
+                            <path d="M189,136 Q192,135 193,137" fill="#fb7185"/>
+                        </g>
+
+                        <!-- جذع الشجرة البني الضخم في اليمين -->
+                        <path d="M158,64 C172,62 184,70 194,78 C200,66 202,44 206,38 C210,44 210,72 208,86 C214,96 226,82 234,64 C238,68 234,82 232,86 C240,78 248,68 252,64 C250,76 238,90 222,100 C236,118 238,148 232,180 C234,196 244,208 254,216 C256,222 240,224 222,220 C206,222 186,230 172,226 C164,224 176,216 184,212 C172,210 158,210 154,206 C174,200 194,192 202,174 C210,144 206,112 186,90 C178,78 168,70 158,64 Z" fill="#b5835a"/>
+                        <path d="M214,104 C208,136 208,166 196,192 M224,132 C222,162 222,190 232,208" fill="none" stroke="#9c6b43" stroke-width="2.5" stroke-linecap="round"/>
+
+                        <!-- يد الفتاة تمسك جذع الشجرة -->
+                        <path d="M186,154 L198,148 L206,146 C209,146 210,150 207,151 L209,153 L205,155 L208,157 L202,158 L192,158 Z" fill="#fde0b8"/>
+
+                        <!-- الولد معصوب العينين يبحث في اليسار -->
+                        <g>
+                            <!-- الساقان والحذاءان الرياضيان الأزرقان -->
+                            <path d="M62,188 L72,188 L68,214 L58,214 Z" fill="#fde0b8"/>
+                            <path d="M88,184 L98,188 L90,210 L80,206 Z" fill="#fde0b8"/>
+                            <!-- الحذاء الأيسر -->
+                            <path d="M56,212 C56,226 56,236 66,238 C76,238 80,232 76,224 L68,212 Z" fill="#2563eb"/>
+                            <path d="M56,230 Q66,238 78,230 L78,235 Q66,243 56,235 Z" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
+                            <path d="M60,218 L68,216 M62,222 L70,220" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+                            <!-- الحذاء الأيمن -->
+                            <path d="M84,204 C76,212 84,222 96,226 C106,228 114,222 110,214 L94,206 Z" fill="#2563eb"/>
+                            <path d="M82,216 Q96,228 112,220 L110,225 Q96,234 80,220 Z" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
+                            <path d="M88,212 L96,208 M92,215 L100,211" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+
+                            <!-- الشورت الأحمر الوردي والقميص الأزرق بأكمام وردية -->
+                            <path d="M56,170 L94,174 L98,186 L80,192 L76,184 L74,192 L52,188 Z" fill="#f43f5e"/>
+                            <!-- الذراع اليسرى الممدودة -->
+                            <path d="M98,144 L124,142 L126,134 L132,140 L140,138 L134,144 L142,146 L134,149 L140,154 L130,152 L122,152 L98,152 Z" fill="#fde0b8"/>
+                            <!-- القميص الأزرق والأكمام -->
+                            <path d="M62,138 L70,136 L104,142 L102,152 L92,152 L94,174 C80,178 66,178 54,170 L64,148 Z" fill="#0284c7"/>
+                            <path d="M62,138 L74,138 L72,152 L58,150 Z" fill="#f43f5e"/>
+                            <path d="M92,138 L104,140 L102,152 L90,150 Z" fill="#f43f5e"/>
+                            <!-- الذراع اليمنى المرفوعة للأمام -->
+                            <path d="M60,144 L52,150 L54,136 L58,142 L62,134 L64,144 L70,142 L64,148 L70,152 L60,152 L56,158 Z" fill="#fde0b8"/>
+
+                            <!-- الرأس والشعر البني المحمر الكثيف -->
+                            <path d="M38,116 C32,102 36,68 62,56 C94,44 118,68 122,102 L126,108 L118,114 L112,126 L104,116 L60,126 L52,134 L46,124 L36,124 Z" fill="#c25e28"/>
+                            <circle cx="80" cy="102" r="35" fill="#fde0b8"/>
+                            <!-- خصلات الغرة الأمامية فوق العصابة -->
+                            <path d="M40,94 C42,64 70,50 96,58 C114,64 122,82 122,98 C116,88 110,82 104,90 C100,78 96,76 92,90 C84,78 78,80 72,94 C66,82 58,86 52,96 Z" fill="#c25e28"/>
+                            <path d="M56,64 C48,76 46,88 46,96 M74,60 C68,74 66,86 64,96 M94,62 C92,74 90,86 88,94" fill="none" stroke="#9a4419" stroke-width="2" stroke-linecap="round"/>
+
+                            <!-- العصابة الفيروزية على العينين مع العقدة الخلفية -->
+                            <path d="M46,102 C68,94 94,90 116,96 L116,108 C94,106 70,114 50,110 Z" fill="#14b8a6"/>
+                            <path d="M48,104 L30,94 L42,92 L48,102 Z" fill="#06b6d4"/>
+                            <path d="M48,106 L30,114 L38,120 L48,110 Z" fill="#06b6d4"/>
+
+                            <!-- الخدود والأنف والابتسامة العريضة -->
+                            <circle cx="66" cy="116" r="7" fill="#fda4af" opacity="0.55"/>
+                            <circle cx="104" cy="110" r="6" fill="#fda4af" opacity="0.55"/>
+                            <path d="M88,108 Q92,110 89,114" fill="none" stroke="#d97706" stroke-width="1.6" stroke-linecap="round"/>
+                            <path d="M74,120 C84,122 96,118 104,114 C106,124 96,132 84,131 C76,130 72,124 74,120 Z" fill="#881337"/>
+                            <path d="M78,121 Q90,122 100,117 Q92,126 78,121 Z" fill="#ffffff"/>
+                            <path d="M82,130 Q90,124 98,128 C93,132 86,132 82,130 Z" fill="#f472b6"/>
+                        </g>
+                    </svg>`;
+                case 'raccoon':
+                    return `<svg viewBox="0 0 265 290" preserveAspectRatio="xMidYMid meet" class="w-full h-full">
+                        <!-- الذيل الكثيف الطويل المخطط بالرمادي الداكن والأبيض على اليسار -->
+                        <path d="M98,238 C64,254 32,240 28,200 C24,166 42,140 34,118 C24,102 6,96 8,86 C10,76 34,74 52,82 C76,94 94,132 94,166 C94,192 84,212 96,226 Z" fill="#f8fafc" stroke="#1e293b" stroke-width="2.6" stroke-linejoin="round"/>
+                        <!-- الحلقات الداكنة على الذيل -->
+                        <path d="M8,86 C10,76 26,75 40,78 C30,86 22,94 18,102 C10,96 7,91 8,86 Z" fill="#475569"/>
+                        <path d="M32,112 C42,98 58,90 70,96 C78,104 84,114 88,124 C68,122 48,126 34,136 C36,128 35,120 32,112 Z" fill="#475569"/>
+                        <path d="M32,158 C50,148 74,146 92,152 C94,162 92,172 88,180 C68,176 46,178 28,186 C28,176 30,166 32,158 Z" fill="#475569"/>
+                        <path d="M28,206 C46,200 68,202 86,210 L86,224 C68,224 48,228 36,234 C30,226 28,216 28,206 Z" fill="#475569"/>
+                        <path d="M72,248 C82,238 88,228 96,226 L100,242 C90,248 80,250 72,248 Z" fill="#475569"/>
+                        <path d="M98,238 C64,254 32,240 28,200 C24,166 42,140 34,118 C24,102 6,96 8,86 C10,76 34,74 52,82 C76,94 94,132 94,166 C94,192 84,212 96,226 Z" fill="none" stroke="#1e293b" stroke-width="2.6" stroke-linejoin="round"/>
+
+                        <!-- القدمان الداكنتان بأصابع مفرودة -->
+                        <path d="M126,264 C112,262 92,266 86,272 C84,276 92,276 96,274 C90,278 92,282 100,278 C98,284 104,286 114,280 C124,278 136,280 144,276 C148,274 146,266 138,264 Z" fill="#64748b" stroke="#1e293b" stroke-width="2.4" stroke-linejoin="round"/>
+                        <path d="M206,264 C222,262 246,264 252,270 C254,274 246,274 242,272 C248,276 246,280 238,278 C240,282 234,284 224,280 C212,278 198,282 192,276 C188,272 192,264 200,264 Z" fill="#64748b" stroke="#1e293b" stroke-width="2.4" stroke-linejoin="round"/>
+
+                        <!-- الجسم الرمادي والذراعان (اليمنى للأسفل واليسرى مرفوعة للتحية) -->
+                        <path d="M118,124 C98,136 86,162 72,190 L86,198 C96,184 104,174 112,166 C112,182 110,196 102,212 C90,236 96,266 134,270 L152,264 C166,266 178,266 188,262 L206,268 C226,258 230,224 214,198 C200,178 194,160 192,146 C208,136 226,126 240,112 L230,104 C214,116 196,120 176,122 Z" fill="#6b7a8c" stroke="#1e293b" stroke-width="2.6" stroke-linejoin="round"/>
+
+                        <!-- فرو البطن الأبيض المتعرج -->
+                        <path d="M126,120 C138,128 156,128 168,122 L174,132 L168,136 L176,144 L170,150 L182,162 L176,168 L194,186 L188,192 L202,210 L194,216 L204,234 C194,256 176,268 154,266 C132,264 118,248 112,226 L118,220 L110,204 L118,198 L112,182 L122,176 L116,160 L126,154 L118,138 L126,132 Z" fill="#f1f5f9"/>
+                        <path d="M134,196 Q154,186 174,194" fill="none" stroke="#64748b" stroke-width="1.6" stroke-linecap="round"/>
+
+                        <!-- اليد اليسرى المتدلية واليد اليمنى الملوحة -->
+                        <path d="M72,188 C62,190 52,194 52,198 C52,202 60,200 66,198 C56,204 54,208 58,210 C62,212 68,206 72,202 C66,210 66,216 70,216 C74,216 78,208 82,202 C86,208 92,208 92,204 C92,200 84,192 80,188 Z" fill="#64748b" stroke="#1e293b" stroke-width="2.2" stroke-linejoin="round"/>
+                        <path d="M230,104 C228,94 228,86 232,86 C236,86 238,94 238,98 C244,90 250,86 254,88 C256,90 250,98 246,102 C254,96 260,94 262,98 C264,102 254,106 248,108 C256,108 262,110 260,114 C258,118 246,118 238,114 Z" fill="#64748b" stroke="#1e293b" stroke-width="2.2" stroke-linejoin="round"/>
+
+                        <!-- الأذنان الكبيرتان -->
+                        <path d="M88,60 C72,32 70,8 84,4 C96,0 116,18 128,32 Z" fill="#6b7a8c" stroke="#1e293b" stroke-width="2.6" stroke-linejoin="round"/>
+                        <path d="M90,54 C78,34 78,16 86,14 C94,12 108,24 114,38 Z" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+                        <path d="M196,68 C216,44 226,20 214,14 C202,8 182,22 168,36 Z" fill="#6b7a8c" stroke="#1e293b" stroke-width="2.6" stroke-linejoin="round"/>
+                        <path d="M194,60 C210,42 214,24 208,22 C200,20 188,30 180,44 Z" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+
+                        <!-- الرأس العريض باللونين الرمادي والأبيض -->
+                        <path d="M62,72 C84,64 96,34 142,30 C186,28 202,64 224,80 C216,92 212,102 204,108 C194,120 172,126 156,126 C148,132 136,132 128,124 C104,120 82,106 68,86 Z" fill="#f8fafc" stroke="#1e293b" stroke-width="2.6" stroke-linejoin="round"/>
+                        <!-- الجبهة الرمادية العلوية -->
+                        <path d="M84,62 C98,38 124,30 146,30 C176,30 198,52 208,74 C194,58 170,46 150,64 C134,42 106,46 84,62 Z" fill="#6b7a8c"/>
+
+                        <!-- القناع الرمادي الداكن حول العينين -->
+                        <path d="M74,78 C86,70 106,54 126,56 C140,58 140,74 126,86 C114,96 98,106 86,96 C80,90 76,84 74,78 Z" fill="#3f4e61"/>
+                        <path d="M214,88 C202,78 182,58 164,58 C150,58 150,76 164,88 C176,98 192,110 204,102 C210,98 212,92 214,88 Z" fill="#3f4e61"/>
+
+                        <!-- العينان الكبيرتان الزرقاوان اللامعتان -->
+                        <ellipse cx="120" cy="72" rx="10" ry="12" fill="#ffffff" stroke="#1e293b" stroke-width="1.8"/>
+                        <ellipse cx="122" cy="73" rx="6.5" ry="8" fill="#1d4ed8"/>
+                        <ellipse cx="122" cy="73" rx="4.2" ry="5.5" fill="#0f172a"/>
+                        <circle cx="120" cy="69.5" r="2.2" fill="#ffffff"/>
+
+                        <ellipse cx="168" cy="75" rx="10" ry="12" fill="#ffffff" stroke="#1e293b" stroke-width="1.8"/>
+                        <ellipse cx="166" cy="76" rx="6.5" ry="8" fill="#1d4ed8"/>
+                        <ellipse cx="166" cy="76" rx="4.2" ry="5.5" fill="#0f172a"/>
+                        <circle cx="164" cy="72.5" r="2.2" fill="#ffffff"/>
+
+                        <!-- الأنف الأسود البيضاوي والابتسامة العريضة باللسان الوردي -->
+                        <ellipse cx="143" cy="94" rx="10.5" ry="7.5" fill="#0f172a"/>
+                        <ellipse cx="141" cy="91.5" rx="3.5" ry="1.6" fill="#64748b" opacity="0.65"/>
+                        <path d="M124,96 C126,112 158,112 162,96" fill="none" stroke="#1e293b" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M129,106 Q143,114 156,106 C152,120 146,125 142,125 C136,125 131,118 129,106 Z" fill="#7f1d1d" stroke="#1e293b" stroke-width="1.8"/>
+                        <path d="M134,118 Q142,113 150,118 C146,124 138,124 134,118 Z" fill="#fb7185"/>
+                    </svg>`;
+                case 'shine':
+                    return `<svg viewBox="0 0 220 220" preserveAspectRatio="xMidYMid meet" class="w-full h-full">
+                        <defs>
+                            <radialGradient id="sunCoreShine1" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#ffff00"/>
+                                <stop offset="45%" stop-color="#ffea00"/>
+                                <stop offset="72%" stop-color="#facc15" stop-opacity="0.88"/>
+                                <stop offset="92%" stop-color="#fb923c" stop-opacity="0.25"/>
+                                <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+                            </radialGradient>
+                            <linearGradient id="sunRayFade1" x1="0" y1="1" x2="0" y2="0">
+                                <stop offset="0%" stop-color="#facc15" stop-opacity="1"/>
+                                <stop offset="52%" stop-color="#fb923c" stop-opacity="0.9"/>
+                                <stop offset="100%" stop-color="#fed7aa" stop-opacity="0"/>
+                            </linearGradient>
+                            <filter id="sunSoftBlur1" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="2.4"/>
+                            </filter>
+                        </defs>
+                        <!-- هالة التوهج الخارجية الناعمة -->
+                        <circle cx="110" cy="110" r="102" fill="url(#sunCoreShine1)"/>
+                        <!-- أشعة الشمس الـ 24 الذهبية البرتقالية الناعمة المتدرجة للشفافية -->
+                        <g filter="url(#sunSoftBlur1)">
+                            ${Array.from({ length: 24 }, (_, idx) => {
+                                const angle = idx * 15;
+                                return `<polygon points="103,110 117,110 116,12 104,12" fill="url(#sunRayFade1)" transform="rotate(${angle} 110 110)"/>`;
+                            }).join('')}
+                        </g>
+                        <!-- قرص الشمس المركزي الأصفر الساطع المشرق -->
+                        <circle cx="110" cy="110" r="54" fill="#ffef00" filter="url(#sunSoftBlur1)"/>
+                        <circle cx="110" cy="110" r="44" fill="#ffff00"/>
+                    </svg>`;
+                case 'mars':
+                    return `<svg viewBox="0 0 220 220" preserveAspectRatio="xMidYMid meet" class="w-full h-full">
+                        <defs>
+                            <clipPath id="marsClipV2">
+                                <circle cx="110" cy="110" r="98"/>
+                            </clipPath>
+                            <radialGradient id="marsBaseGradV2" cx="42%" cy="35%" r="68%">
+                                <stop offset="0%" stop-color="#f94c10"/>
+                                <stop offset="48%" stop-color="#dc2608"/>
+                                <stop offset="82%" stop-color="#a81406"/>
+                                <stop offset="100%" stop-color="#7c0e06"/>
+                            </radialGradient>
+                        </defs>
+                        <!-- قرص كوكب المريخ الأحمر البرتقالي -->
+                        <circle cx="110" cy="110" r="98" fill="url(#marsBaseGradV2)"/>
+                        <g clip-path="url(#marsClipV2)">
+                            <!-- بقع وتضاريس برتقالية مضيئة على اليسار واليمين -->
+                            <path d="M10,74 C36,68 62,74 96,84 C84,96 52,92 22,102 Z" fill="#f97316" opacity="0.65"/>
+                            <path d="M168,38 C186,62 192,94 176,126 C168,116 172,94 166,76 C160,60 156,48 168,38 Z" fill="#fb5607" opacity="0.75"/>
+                            <path d="M24,132 C46,126 70,136 92,150 C68,158 46,154 32,146 Z" fill="#f97316" opacity="0.5"/>
+                            <!-- أخاديد وخطوط داكنة بنية محمرة عبر منتصف وأسفل الكوكب -->
+                            <path d="M72,130 C112,138 148,128 198,110 C208,136 184,186 122,204 C92,208 66,196 54,184 C96,184 142,168 172,138 C144,148 106,148 72,130 Z" fill="#7c1d0a" opacity="0.78"/>
+                            <path d="M74,162 C112,158 146,146 172,132 C158,158 122,174 80,174 Z" fill="#dc2608" opacity="0.8"/>
+                            <path d="M180,118 C172,152 146,184 102,196 C142,196 182,172 196,130 Z" fill="#991b1b" opacity="0.72"/>
+                            <!-- حافة الإضاءة الصفراء الدافئة أسفل اليسار -->
+                            <path d="M14,126 C18,154 32,176 52,192 C36,174 26,152 22,130 Z" fill="#fde047" opacity="0.85"/>
+                            <path d="M80,186 C94,188 104,192 112,196 C98,198 86,194 80,186 Z" fill="#fdba74" opacity="0.7"/>
+                            <!-- فوهات وبقع سطحية متفرقة -->
+                            <circle cx="52" cy="126" r="4.5" fill="#7c1d0a"/>
+                            <circle cx="66" cy="122" r="3" fill="#7c1d0a"/>
+                            <circle cx="84" cy="108" r="5" fill="#f97316" opacity="0.65"/>
+                            <ellipse cx="132" cy="88" rx="4" ry="2.2" fill="#fb923c"/>
+                            <circle cx="96" cy="100" r="7" fill="none" stroke="#f97316" stroke-width="2.5" stroke-dasharray="14 8" opacity="0.6"/>
+                            <!-- الغطاء القطبي الشمالي الأبيض والهالة الخوخية المتموجة -->
+                            <ellipse cx="110" cy="37" rx="48" ry="24" fill="#fb7144"/>
+                            <path d="M68,40 C86,48 118,50 144,40 C134,52 94,54 68,40 Z" fill="#c2290a" opacity="0.7"/>
+                            <ellipse cx="110" cy="27" rx="34" ry="13" fill="#fdba74"/>
+                            <path d="M78,24 C86,15 102,12 116,13 C130,14 142,18 145,26 C138,31 128,28 122,33 C114,29 108,36 104,31 C96,31 92,26 84,28 Z" fill="#ffffff"/>
+                        </g>
+                    </svg>`;
+                case 'earth':
+                    return `<svg viewBox="0 0 220 220" preserveAspectRatio="xMidYMid meet" class="w-full h-full">
+                        <defs>
+                            <clipPath id="earthGlobeClipV2">
+                                <circle cx="110" cy="110" r="98"/>
+                            </clipPath>
+                            <radialGradient id="earthOceanGradV2" cx="44%" cy="32%" r="72%">
+                                <stop offset="0%" stop-color="#a5f3fc"/>
+                                <stop offset="40%" stop-color="#38bdf8"/>
+                                <stop offset="78%" stop-color="#0284c7"/>
+                                <stop offset="100%" stop-color="#1e3a8a"/>
+                            </radialGradient>
+                            <radialGradient id="earthCheekGradV2" cx="40%" cy="30%" r="70%">
+                                <stop offset="0%" stop-color="#fef08a"/>
+                                <stop offset="55%" stop-color="#facc15"/>
+                                <stop offset="100%" stop-color="#d97706"/>
+                            </radialGradient>
+                            <linearGradient id="earthLandLeftV2" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#bef264"/>
+                                <stop offset="60%" stop-color="#65a30d"/>
+                                <stop offset="100%" stop-color="#3f6212"/>
+                            </linearGradient>
+                            <linearGradient id="earthLandRightV2" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#84cc16"/>
+                                <stop offset="55%" stop-color="#4d7c0f"/>
+                                <stop offset="100%" stop-color="#14532d"/>
+                            </linearGradient>
+                        </defs>
+                        <!-- المحيط الأزرق الكروي المضيء -->
+                        <circle cx="110" cy="110" r="98" fill="url(#earthOceanGradV2)"/>
+                        <g clip-path="url(#earthGlobeClipV2)">
+                            <!-- القارات الخضراء على اليسار (الأمريكتان وجرينلاند) -->
+                            <path d="M84,14 C100,12 114,16 118,22 C108,28 100,34 88,38 C84,32 88,24 84,14 Z" fill="url(#earthLandLeftV2)" stroke="#1a2e05" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M18,52 C34,30 62,16 82,20 C76,34 74,46 66,54 C54,62 42,72 34,88 C32,102 36,112 36,120 L26,116 C20,104 16,92 18,74 Z" fill="url(#earthLandLeftV2)" stroke="#1a2e05" stroke-width="2.2" stroke-linejoin="round"/>
+                            <path d="M36,116 C48,112 58,128 68,136 C74,144 74,158 66,172 C62,184 68,192 74,200 C56,192 44,174 36,154 C30,138 28,124 36,116 Z" fill="url(#earthLandLeftV2)" stroke="#1a2e05" stroke-width="2.2" stroke-linejoin="round"/>
+                            <!-- القارات الخضراء على اليمين (أوروبا وأفريقيا والبحر المتوسط) -->
+                            <path d="M156,28 C176,34 198,54 206,84 L208,116 C198,144 186,166 168,180 C162,168 172,148 168,134 C156,126 146,116 148,96 C150,82 162,72 156,62 C154,52 164,46 156,28 Z" fill="url(#earthLandRightV2)" stroke="#14532d" stroke-width="2.2" stroke-linejoin="round"/>
+                            <!-- البحر المتوسط والأحمر داخل القارة اليمنى -->
+                            <path d="M162,68 C172,62 184,70 192,76 C188,84 176,84 168,78 C162,76 158,72 162,68 Z" fill="#38bdf8" stroke="#0f172a" stroke-width="1.8" stroke-linejoin="round"/>
+                            <path d="M192,88 L202,114 L196,118 L188,92 Z" fill="#0284c7" stroke="#0f172a" stroke-width="1.6"/>
+                            <!-- لمعة زجاجية علوية على الكرة الأرضية -->
+                            <ellipse cx="102" cy="40" rx="68" ry="24" fill="#ffffff" opacity="0.28"/>
+                        </g>
+                        <!-- حافة الكرة الأرضية الزرقاء -->
+                        <circle cx="110" cy="110" r="98" fill="none" stroke="#0284c7" stroke-width="2.5" opacity="0.5"/>
+
+                        <!-- الحاجبان المقوسان الأزرقان الداكنان -->
+                        <path d="M64,64 C72,48 84,48 90,56 C80,54 72,58 64,64 Z" fill="#334155" stroke="#1e293b" stroke-width="1.6" stroke-linejoin="round"/>
+                        <path d="M152,64 C144,48 132,48 126,56 C136,54 144,58 152,64 Z" fill="#334155" stroke="#1e293b" stroke-width="1.6" stroke-linejoin="round"/>
+
+                        <!-- العين اليسرى البيضاوية الكبيرة بقزحية زرقاء -->
+                        <ellipse cx="82" cy="94" rx="18" ry="26" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+                        <ellipse cx="81" cy="99" rx="12" ry="16" fill="#1d4ed8"/>
+                        <ellipse cx="81" cy="100" rx="9" ry="12" fill="#0284c7"/>
+                        <ellipse cx="81" cy="98" rx="6.5" ry="9" fill="#0f172a"/>
+                        <ellipse cx="75.5" cy="92" rx="3" ry="4" fill="#ffffff"/>
+                        <ellipse cx="81" cy="110" rx="6" ry="2.2" fill="#7dd3fc" opacity="0.85"/>
+
+                        <!-- العين اليمنى البيضاوية الكبيرة بقزحية زرقاء -->
+                        <ellipse cx="136" cy="94" rx="18" ry="26" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+                        <ellipse cx="139" cy="99" rx="12" ry="16" fill="#1d4ed8"/>
+                        <ellipse cx="139" cy="100" rx="9" ry="12" fill="#0284c7"/>
+                        <ellipse cx="139" cy="98" rx="6.5" ry="9" fill="#0f172a"/>
+                        <ellipse cx="133.5" cy="92" rx="3" ry="4" fill="#ffffff"/>
+                        <ellipse cx="139" cy="110" rx="6" ry="2.2" fill="#7dd3fc" opacity="0.85"/>
+
+                        <!-- الابتسامة العريضة السعيدة مع الأسنان البيضاء واللسان الوردي -->
+                        <path d="M78,132 Q109,150 140,132 C132,162 118,170 109,170 C100,170 86,162 78,132 Z" fill="#6b1018" stroke="#0f172a" stroke-width="2.4" stroke-linejoin="round"/>
+                        <!-- صف الأسنان العلوي الأبيض -->
+                        <path d="M84,135 Q109,149 134,135 C128,148 119,154 109,154 C99,154 90,148 84,135 Z" fill="#fefce8"/>
+                        <!-- اللسان الوردي -->
+                        <path d="M96,162 Q109,153 122,162 C116,168 102,168 96,162 Z" fill="#f472b6"/>
+                        <path d="M97,172 Q109,178 121,172" fill="none" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round"/>
+
+                        <!-- الخدان الذهبيان اللامعان -->
+                        <ellipse cx="72" cy="122" rx="12" ry="8.5" transform="rotate(-12 72 122)" fill="url(#earthCheekGradV2)" stroke="#b45309" stroke-width="1"/>
+                        <ellipse cx="69" cy="119" rx="5" ry="2.2" transform="rotate(-12 69 119)" fill="#ffffff" opacity="0.75"/>
+                        <ellipse cx="146" cy="122" rx="12" ry="8.5" transform="rotate(12 146 122)" fill="url(#earthCheekGradV2)" stroke="#b45309" stroke-width="1"/>
+                        <ellipse cx="143" cy="119" rx="5" ry="2.2" transform="rotate(12 143 119)" fill="#ffffff" opacity="0.75"/>
+                    </svg>`;
+                case 'astronaut':
+                    return `<svg viewBox="0 0 180 280" preserveAspectRatio="xMidYMid meet" class="w-full h-full">
+                        <defs>
+                            <radialGradient id="astroVisorGradV2" cx="35%" cy="35%" r="65%">
+                                <stop offset="0%" stop-color="#38bdf8"/>
+                                <stop offset="40%" stop-color="#0c4a6e"/>
+                                <stop offset="100%" stop-color="#020617"/>
+                            </radialGradient>
+                        </defs>
+                        <!-- الذراع اليسرى المرفوعة للتحية (يسار المشاهد) -->
+                        <path d="M58,82 L32,62 C26,56 26,44 30,36 L44,36 L44,54 L68,72 Z" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M58,82 L32,62 C26,56 26,44 30,36 L40,36 L40,56 L66,76 Z" fill="#f8fafc"/>
+                        <!-- الشريطان البرتقاليان على الذراع المرفوعة -->
+                        <path d="M29,60 Q40,60 47,50" fill="none" stroke="#ef4444" stroke-width="3.5"/>
+                        <path d="M39,71 Q49,68 55,58" fill="none" stroke="#ef4444" stroke-width="3.5"/>
+                        <!-- الكف الملوحة بالتحية (5 أصابع) -->
+                        <path d="M26,40 C20,34 16,22 18,16 C20,14 23,18 25,24 L25,12 C27,10 30,12 31,22 L33,10 C35,9 38,12 37,22 L40,13 C43,12 45,16 42,28 L49,21 C52,21 53,26 47,36 C43,43 32,44 26,40 Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.2" stroke-linejoin="round"/>
+
+                        <!-- الذراع اليمنى المتدلية (يمين المشاهد) -->
+                        <path d="M126,76 C140,86 150,114 148,142 L134,142 C136,120 128,100 118,92 Z" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1.5"/>
+                        <path d="M124,78 C136,88 144,114 143,142 L138,142 C138,118 130,98 120,90 Z" fill="#f8fafc"/>
+                        <!-- الشريطان البرتقاليان على الذراع اليمنى -->
+                        <path d="M128,96 Q137,90 144,88" fill="none" stroke="#ef4444" stroke-width="3.5"/>
+                        <path d="M134,114 Q143,108 150,114" fill="none" stroke="#ef4444" stroke-width="3.5"/>
+                        <!-- الكف اليمنى المتدلية -->
+                        <path d="M134,140 C130,144 130,154 136,156 C138,150 140,148 142,150 L138,162 C140,165 144,162 146,154 L144,165 C146,167 150,164 152,155 L151,164 C154,165 157,160 156,150 C154,142 146,138 134,140 Z" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1.2"/>
+
+                        <!-- الساقان البيضاوان والركبتان والحذاءان الفضائيان -->
+                        <path d="M62,134 L122,134 C128,168 124,206 116,232 L98,232 C98,200 96,172 92,158 C88,172 86,200 86,232 L68,232 C60,206 56,168 62,134 Z" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.6"/>
+                        <path d="M64,144 C64,174 68,204 72,226 L78,226 C74,204 72,174 72,144 Z" fill="#ffffff"/>
+                        <path d="M116,144 C116,174 112,204 108,226 L102,226 C106,204 108,174 108,144 Z" fill="#ffffff"/>
+                        <!-- وسادتا الركبة الرماديتان والأشرطة الحمراء -->
+                        <path d="M59,174 Q74,171 89,180" fill="none" stroke="#ef4444" stroke-width="4"/>
+                        <path d="M62,208 Q74,210 88,206" fill="none" stroke="#ef4444" stroke-width="4"/>
+                        <ellipse cx="73" cy="191" rx="11" ry="13" fill="#cbd5e1"/>
+                        <ellipse cx="73" cy="191" rx="7" ry="8" fill="#e2e8f0"/>
+
+                        <path d="M125,174 Q110,171 95,180" fill="none" stroke="#ef4444" stroke-width="4"/>
+                        <path d="M122,208 Q110,210 96,206" fill="none" stroke="#ef4444" stroke-width="4"/>
+                        <ellipse cx="111" cy="191" rx="11" ry="13" fill="#cbd5e1"/>
+                        <ellipse cx="111" cy="191" rx="7" ry="8" fill="#e2e8f0"/>
+
+                        <!-- الحذاءان الفضائيان الرماديان والأبيضان -->
+                        <path d="M64,228 L88,228 C92,246 84,264 66,266 L54,266 C48,266 48,252 56,242 Z" fill="#94a3b8"/>
+                        <path d="M52,254 C54,244 74,242 82,254 C76,260 58,260 52,254 Z" fill="#e2e8f0"/>
+                        <path d="M120,228 L96,228 C92,246 100,264 118,266 L130,266 C136,266 136,252 128,242 Z" fill="#94a3b8"/>
+                        <path d="M132,254 C130,244 110,242 102,254 C108,260 126,260 132,254 Z" fill="#e2e8f0"/>
+
+                        <!-- جذع بدلة الفضاء البيضاء والكتفان -->
+                        <rect x="54" y="68" width="76" height="72" rx="18" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1.6"/>
+                        <rect x="58" y="70" width="68" height="64" rx="15" fill="#f8fafc"/>
+                        <!-- لوحة التحكم المركزية على الصدر -->
+                        <rect x="70" y="84" width="44" height="44" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2.4"/>
+                        <!-- الشاشة الزرقاء الداكنة اللامعة -->
+                        <rect x="82" y="90" width="26" height="10" rx="2" fill="#0f172a"/>
+                        <rect x="84" y="91" width="22" height="4" rx="1" fill="#38bdf8" opacity="0.65"/>
+                        <!-- لوحة الأزرار والمفاتيح الصغيرة -->
+                        <rect x="74" y="104" width="14" height="18" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1"/>
+                        <circle cx="94" cy="107" r="2.2" fill="#cbd5e1"/>
+                        <circle cx="100" cy="107" r="2.2" fill="#cbd5e1"/>
+                        <circle cx="106" cy="107" r="2.2" fill="#cbd5e1"/>
+                        <rect x="91" y="113" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+                        <rect x="102" y="113" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+
+                        <!-- الخوذة الفضائية الدائرية مع سماعتي الجانبين -->
+                        <rect x="52" y="34" width="12" height="24" rx="5" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.4"/>
+                        <circle cx="57" cy="41" r="2.2" fill="#1e3a8a"/>
+                        <circle cx="57" cy="50" r="2.2" fill="#1e3a8a"/>
+                        <rect x="120" y="34" width="12" height="24" rx="5" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.4"/>
+                        <circle cx="127" cy="41" r="2.2" fill="#1e3a8a"/>
+                        <circle cx="127" cy="50" r="2.2" fill="#1e3a8a"/>
+
+                        <circle cx="92" cy="42" r="33" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1.5"/>
+                        <circle cx="92" cy="40" r="30" fill="#f8fafc"/>
+                        <!-- الواقي الزجاجي الداكن اللامع للخوذة -->
+                        <circle cx="92" cy="41" r="24" fill="url(#astroVisorGradV2)" stroke="#0f172a" stroke-width="2.6"/>
+                        <!-- انعكاس الضوء الأبيض على زجاج الخوذة -->
+                        <path d="M74,40 C74,28 84,21 96,21 C85,25 80,32 80,44 C80,50 82,54 84,56 C78,53 74,47 74,40 Z" fill="#ffffff" opacity="0.72"/>
+                    </svg>`;
+                case 'space':
+                    return `<svg viewBox="0 0 220 210" preserveAspectRatio="xMidYMid meet" class="w-full h-full rounded-xl">
+                        <!-- خلفية الفضاء الكحلية العميقة -->
+                        <rect x="0" y="0" width="220" height="210" rx="14" fill="#050b1d"/>
+                        <!-- النجوم المتلألئة رباعية الرؤوس والنقاط المضيئة -->
+                        <g fill="#ffffff">
+                            <path d="M30,22 L31.5,26.5 L36,28 L31.5,29.5 L30,34 L28.5,29.5 L24,28 L28.5,26.5 Z"/>
+                            <path d="M84,10 L85.2,13.8 L89,15 L85.2,16.2 L84,20 L82.8,16.2 L79,15 L82.8,13.8 Z"/>
+                            <path d="M188,18 L189.2,21.8 L193,23 L189.2,24.2 L188,28 L186.8,24.2 L183,23 L186.8,21.8 Z"/>
+                            <path d="M198,64 L199.5,68.5 L204,70 L199.5,71.5 L198,76 L196.5,71.5 L192,70 L196.5,68.5 Z"/>
+                            <path d="M148,80 L149.5,84.5 L154,86 L149.5,87.5 L148,92 L146.5,87.5 L142,86 L146.5,84.5 Z"/>
+                            <path d="M52,118 L53.5,122.5 L58,124 L53.5,125.5 L52,130 L50.5,125.5 L46,124 L50.5,122.5 Z"/>
+                            <path d="M194,166 L195.5,170.5 L200,172 L195.5,173.5 L194,178 L192.5,173.5 L188,172 L192.5,170.5 Z"/>
+                            <path d="M30,180 L31.2,183.8 L35,185 L31.2,186.2 L30,190 L28.8,186.2 L25,185 L28.8,183.8 Z"/>
+                            <circle cx="24" cy="64" r="2"/>
+                            <circle cx="136" cy="18" r="2"/>
+                            <circle cx="20" cy="134" r="1.8"/>
+                            <circle cx="196" cy="122" r="2"/>
+                            <circle cx="172" cy="186" r="2"/>
+                            <circle cx="124" cy="166" r="1.8"/>
+                            <circle cx="94" cy="158" r="2"/>
+                        </g>
+
+                        <!-- الكويكب الرمادي في أعلى اليسار -->
+                        <path d="M54,46 L62,42 L68,46 L66,54 L58,56 L52,52 Z" fill="#94a3b8"/>
+                        <circle cx="58" cy="48" r="1.8" fill="#64748b"/>
+                        <circle cx="63" cy="51" r="1.5" fill="#64748b"/>
+
+                        <!-- كوكب زحل الذهبي ذو الحلقات في أعلى اليمين -->
+                        <g transform="translate(164 46) rotate(22)">
+                            <ellipse cx="0" cy="0" rx="32" ry="8" fill="none" stroke="#f59e0b" stroke-width="5.5"/>
+                            <circle cx="0" cy="0" r="16" fill="#fbbf24"/>
+                            <path d="M-15,-4 Q0,-1 15,-4 M-16,3 Q0,6 16,3" fill="none" stroke="#d97706" stroke-width="2.5" opacity="0.65"/>
+                            <path d="M-32,0 A32,8 0 0,0 32,0" fill="none" stroke="#fcd34d" stroke-width="4.5"/>
+                        </g>
+
+                        <!-- الكوكب البني الصغير في منتصف اليسار -->
+                        <circle cx="32" cy="96" r="7.5" fill="#92400e"/>
+                        <circle cx="30" cy="94" r="2" fill="#b45309"/>
+                        <circle cx="35" cy="99" r="1.5" fill="#78350f"/>
+
+                        <!-- الكوكب البرتقالي (المريخ) في أسفل اليسار -->
+                        <circle cx="64" cy="176" r="11" fill="#ea580c"/>
+                        <circle cx="60" cy="172" r="4" fill="#fb923c" opacity="0.6"/>
+                        <circle cx="69" cy="180" r="2.5" fill="#9a3412" opacity="0.65"/>
+
+                        <!-- القمر الرمادي الفاتح ذو الفوهات في أسفل اليمين -->
+                        <circle cx="158" cy="144" r="8" fill="#cbd5e1"/>
+                        <circle cx="155" cy="142" r="2" fill="#94a3b8"/>
+                        <circle cx="161" cy="146" r="1.5" fill="#94a3b8"/>
+
+                        <!-- رائد الفضاء اللطيف الطافي في منتصف الفضاء -->
+                        <g transform="translate(108 102) rotate(12)">
+                            <!-- حقيبة الظهر الرمادية الداكنة -->
+                            <rect x="6" y="-8" width="12" height="24" rx="4" fill="#64748b"/>
+                            <!-- الذراع اليسرى المرفوعة -->
+                            <path d="M-12,-4 L-28,-16 L-34,-8 L-16,6 Z" fill="#e2e8f0"/>
+                            <circle cx="-33" cy="-14" r="5.5" fill="#475569"/>
+                            <!-- الذراع اليمنى الممتدة -->
+                            <path d="M12,-4 L28,6 L24,14 L8,6 Z" fill="#e2e8f0"/>
+                            <circle cx="29" cy="11" r="5.5" fill="#475569"/>
+                            <!-- الساقان المثنيتان والأحذية الرمادية الداكنة -->
+                            <path d="M-12,14 L-20,28 L-10,36 L-2,20 Z" fill="#e2e8f0"/>
+                            <ellipse cx="-14" cy="34" rx="5.5" ry="4" fill="#475569"/>
+                            <path d="M10,14 L6,30 L18,38 L22,22 Z" fill="#e2e8f0"/>
+                            <ellipse cx="18" cy="36" rx="5.5" ry="4" fill="#475569"/>
+                            <!-- جذع البدلة البيضاء ولوحة الصدر الزرقاء -->
+                            <rect x="-14" y="-8" width="28" height="26" rx="8" fill="#f8fafc"/>
+                            <rect x="-8" y="-2" width="14" height="9" rx="2" fill="#3b82f6"/>
+                            <line x1="-14" y1="11" x2="14" y2="11" stroke="#94a3b8" stroke-width="2.5"/>
+                            <!-- الخوذة الفضائية والواقي الأزرق الداكن -->
+                            <circle cx="0" cy="-24" r="18" fill="#f8fafc"/>
+                            <rect x="-15" y="-35" width="26" height="22" rx="10" fill="#1e3a5f"/>
+                            <path d="M-11,-28 C-11,-32 -5,-33 -2,-33 C-6,-30 -8,-26 -8,-21 C-10,-23 -11,-25 -11,-28 Z" fill="#93c5fd" opacity="0.6"/>
+                        </g>
+                    </svg>`;
+                case 'zookeeper':
+                    return `<svg viewBox="0 0 230 285" preserveAspectRatio="xMidYMid meet" class="w-full h-full">
+                        <!-- ذيل القرد الملتف على اليمين -->
+                        <path d="M158,98 C174,102 178,84 174,74 C170,66 184,64 188,74" fill="none" stroke="#1e293b" stroke-width="8" stroke-linecap="round"/>
+                        <path d="M158,98 C174,102 178,84 174,74 C170,66 184,64 188,74" fill="none" stroke="#b4692c" stroke-width="4.5" stroke-linecap="round"/>
+
+                        <!-- الثعبان الأخضر اللطيف على الكتف الأيسر -->
+                        <path d="M52,52 L42,54 L38,52 M42,54 L39,57" fill="none" stroke="#1e293b" stroke-width="1.8" stroke-linecap="round"/>
+                        <path d="M68,74 C60,64 60,54 64,46 C62,38 76,36 80,46 C82,54 78,60 88,68 Z" fill="#84cc16" stroke="#1e293b" stroke-width="2.4" stroke-linejoin="round"/>
+                        <path d="M62,56 L72,56 M63,62 L75,62 M66,68 L78,68" stroke="#1e293b" stroke-width="1.6"/>
+                        <ellipse cx="64" cy="44" rx="14" ry="8" fill="#84cc16" stroke="#1e293b" stroke-width="2.4"/>
+                        <circle cx="66" cy="42" r="2.2" fill="#0f172a"/>
+                        <path d="M52,46 Q60,49 68,46" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+
+                        <!-- القرد البني اللطيف الجالس على الكتف الأيمن -->
+                        <circle cx="164" cy="42" r="8" fill="#fed7aa" stroke="#1e293b" stroke-width="2.2"/>
+                        <path d="M134,54 C146,54 162,62 162,80 C162,88 156,94 148,94 L132,82 Z" fill="#b4692c" stroke="#1e293b" stroke-width="2.4"/>
+                        <ellipse cx="144" cy="44" rx="18" ry="18" fill="#b4692c" stroke="#1e293b" stroke-width="2.4"/>
+                        <path d="M140,26 L146,16 L152,26" fill="#b4692c" stroke="#1e293b" stroke-width="2.2" stroke-linejoin="round"/>
+                        <ellipse cx="146" cy="48" rx="15" ry="12" fill="#fde6d2" stroke="#1e293b" stroke-width="1.8"/>
+                        <circle cx="140" cy="42" r="2.8" fill="#0f172a"/>
+                        <circle cx="152" cy="42" r="2.8" fill="#0f172a"/>
+                        <path d="M136,52 Q146,56 156,52" fill="none" stroke="#1e293b" stroke-width="1.8" stroke-linecap="round"/>
+
+                        <!-- الساقان والحذاءان البنيان والرماديان -->
+                        <path d="M84,196 L78,242 L92,242 L100,196 Z" fill="#fed7aa" stroke="#1e293b" stroke-width="2.4"/>
+                        <path d="M126,196 L134,242 L148,242 L140,196 Z" fill="#fed7aa" stroke="#1e293b" stroke-width="2.4"/>
+                        <path d="M76,242 L92,242 L96,268 C96,278 66,278 66,268 Z" fill="#785236" stroke="#1e293b" stroke-width="2.6" stroke-linejoin="round"/>
+                        <ellipse cx="81" cy="268" rx="14" ry="8" fill="#cbd5e1" stroke="#1e293b" stroke-width="2.4"/>
+                        <path d="M134,242 L150,242 L160,268 C160,278 130,278 130,268 Z" fill="#785236" stroke="#1e293b" stroke-width="2.6" stroke-linejoin="round"/>
+                        <ellipse cx="145" cy="268" rx="14" ry="8" fill="#cbd5e1" stroke="#1e293b" stroke-width="2.4"/>
+
+                        <!-- الذراعان على الخصر -->
+                        <path d="M72,96 L56,122 L78,154 L88,148 L70,122 L82,106 Z" fill="#fed7aa" stroke="#1e293b" stroke-width="2.4" stroke-linejoin="round"/>
+                        <path d="M154,96 L170,122 L148,154 L138,148 L156,122 L144,106 Z" fill="#fed7aa" stroke="#1e293b" stroke-width="2.4" stroke-linejoin="round"/>
+
+                        <!-- الشورت الكاكي والحزام وميدالية المفتاح -->
+                        <path d="M84,142 L142,142 L152,196 L122,196 L113,168 L104,196 L74,196 Z" fill="#e5dec9" stroke="#1e293b" stroke-width="2.6" stroke-linejoin="round"/>
+                        <rect x="82" y="138" width="62" height="8" rx="2" fill="#8b836a" stroke="#1e293b" stroke-width="2.2"/>
+                        <!-- حلقة المفتاح الفضية المعلقة بالحزام -->
+                        <circle cx="128" cy="150" r="7" fill="none" stroke="#475569" stroke-width="2.4"/>
+                        <path d="M131,156 L134,172 L139,172 L137,156 Z" fill="#cbd5e1" stroke="#1e293b" stroke-width="1.8"/>
+
+                        <!-- قميص السفاري الكاكي ذو الجيبين والياقة -->
+                        <path d="M76,74 L150,74 L168,104 L150,114 L144,102 L144,140 L82,140 L82,102 L76,114 L58,104 Z" fill="#e5dec9" stroke="#1e293b" stroke-width="2.6" stroke-linejoin="round"/>
+                        <rect x="86" y="96" width="20" height="18" rx="2" fill="#a89f81" stroke="#1e293b" stroke-width="2"/>
+                        <path d="M86,96 L96,104 L106,96" fill="none" stroke="#1e293b" stroke-width="2"/>
+                        <rect x="120" y="96" width="20" height="18" rx="2" fill="#a89f81" stroke="#1e293b" stroke-width="2"/>
+                        <path d="M120,96 L130,104 L140,96" fill="none" stroke="#1e293b" stroke-width="2"/>
+                        <polygon points="96,74 113,94 130,74" fill="#fed7aa" stroke="#1e293b" stroke-width="2"/>
+                        <line x1="113" y1="94" x2="113" y2="140" stroke="#1e293b" stroke-width="2"/>
+
+                        <!-- الرأس المبتسم وقبعة السفاري الكاكي -->
+                        <path d="M88,36 L138,36 L138,56 C138,70 126,76 113,76 C100,76 88,70 88,56 Z" fill="#fed7aa" stroke="#1e293b" stroke-width="2.6"/>
+                        <!-- العينان والأنف والابتسامة العريضة -->
+                        <circle cx="101" cy="48" r="4.5" fill="#ffffff" stroke="#1e293b" stroke-width="1.8"/>
+                        <circle cx="101" cy="48" r="2.5" fill="#0f172a"/>
+                        <circle cx="125" cy="48" r="4.5" fill="#ffffff" stroke="#1e293b" stroke-width="1.8"/>
+                        <circle cx="125" cy="48" r="2.5" fill="#0f172a"/>
+                        <path d="M113,48 L113,56 Q110,58 108,56" fill="none" stroke="#1e293b" stroke-width="1.8" stroke-linecap="round"/>
+                        <path d="M101,62 Q113,60 125,62 C123,71 103,71 101,62 Z" fill="#ffffff" stroke="#1e293b" stroke-width="2.2"/>
+                        <!-- قبعة السفاري -->
+                        <path d="M78,36 C96,28 130,28 148,36 C130,40 96,40 78,36 Z" fill="#d6cfc0" stroke="#1e293b" stroke-width="2.4"/>
+                        <path d="M90,32 L94,12 C106,8 120,8 132,12 L136,32 Z" fill="#e5dec9" stroke="#1e293b" stroke-width="2.4" stroke-linejoin="round"/>
+                        <path d="M91,28 Q113,32 135,28" fill="none" stroke="#8b836a" stroke-width="3.5"/>
+                    </svg>`;
+                case 'idea':
+                    return `<svg viewBox="0 0 240 240" preserveAspectRatio="xMidYMid meet" class="w-full h-full">
+                        <!-- الدائرة الخلفية النعناعية الفاتحة -->
+                        <circle cx="116" cy="122" r="96" fill="#a7e2c5"/>
+
+                        <!-- سحابة التفكير البيضاء بإطار أزرق سماوي وفي داخلها المصباح المضيء -->
+                        <g>
+                            <circle cx="150" cy="96" r="4.5" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+                            <ellipse cx="164" cy="88" rx="8.5" ry="6.5" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+                            <path d="M150,76 C134,76 126,64 132,52 C126,40 138,24 156,28 C164,12 190,12 200,26 C214,22 226,34 222,48 C230,56 226,72 212,74 C208,84 190,86 180,80 C170,84 158,82 150,76 Z" fill="#ffffff" stroke="#93c5fd" stroke-width="2.4" stroke-linejoin="round"/>
+                            <!-- المصباح الأصفر المتوهج المائل وأشعته الذهبية -->
+                            <g transform="translate(182 52) rotate(24)">
+                                <path d="M-11,-4 C-11,-14 11,-14 11,-4 C11,4 6,7 5,13 L-5,13 C-6,7 -11,4 -11,-4 Z" fill="#fde047" stroke="#eab308" stroke-width="1.6"/>
+                                <path d="M-4,13 L-4,4 C-4,1 4,1 4,4 L4,13" fill="none" stroke="#b45309" stroke-width="1.4"/>
+                                <rect x="-5" y="13" width="10" height="7" rx="2" fill="#94a3b8"/>
+                                <line x1="-5" y1="16" x2="5" y2="16" stroke="#475569" stroke-width="1.2"/>
+                                <path d="M-3,20 L3,20 L1.5,23 L-1.5,23 Z" fill="#475569"/>
+                                <!-- أشعة المصباح الصفراء -->
+                                <g stroke="#facc15" stroke-width="2.4" stroke-linecap="round">
+                                    <line x1="0" y1="-22" x2="0" y2="-16"/>
+                                    <line x1="-12" y1="-19" x2="-9" y2="-14"/>
+                                    <line x1="12" y1="-19" x2="9" y2="-14"/>
+                                    <line x1="-19" y1="-10" x2="-14" y2="-7"/>
+                                    <line x1="19" y1="-10" x2="14" y2="-7"/>
+                                </g>
+                            </g>
+                        </g>
+
+                        <!-- الذراع اليمنى المرفوعة بإصبع السبابة (فكرة!) -->
+                        <path d="M132,172 L152,188 L168,154 L156,148 L142,170 Z" fill="#fcd5b5"/>
+                        <path d="M156,148 L162,130 C163,126 168,126 168,131 L164,142 C170,140 175,146 172,154 C168,160 158,162 154,156 Z" fill="#fcd5b5" stroke="#d97706" stroke-width="1.2" stroke-linejoin="round"/>
+
+                        <!-- قميص البولو البرتقالي المحمر بالياقة البيضاء والحواف البيضاء -->
+                        <path d="M64,156 C76,148 118,148 130,156 L146,176 L132,190 L124,180 L128,226 L62,226 L66,180 L56,186 L56,166 Z" fill="#ef4c29"/>
+                        <!-- الخط الأفقي الداكن والحواف البيضاء للأكمام -->
+                        <rect x="65" y="178" width="60" height="7" fill="#dc3b1a"/>
+                        <path d="M56,182 Q66,178 74,182 L74,186 Q66,182 56,186 Z" fill="#ffffff"/>
+                        <path d="M130,186 L144,174 L147,178 L133,190 Z" fill="#ffffff"/>
+                        <!-- الياقة البيضاء والرقبة -->
+                        <rect x="86" y="138" width="18" height="22" fill="#f4b995"/>
+                        <polygon points="88,152 104,152 108,172 96,162 90,174" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+
+                        <!-- الذراع اليسرى ويد الطفل تحت ذقنه مفكراً -->
+                        <path d="M68,174 L68,202 C68,208 82,208 84,200 L88,166 L102,154 C104,150 96,144 86,152 L74,166 Z" fill="#fcd5b5" stroke="#d97706" stroke-width="1.1" stroke-linejoin="round"/>
+
+                        <!-- الأذنان والوجه اللطيف للطفل -->
+                        <circle cx="48" cy="116" r="11" fill="#fcd5b5"/>
+                        <circle cx="136" cy="108" r="11" fill="#fcd5b5"/>
+                        <ellipse cx="92" cy="96" rx="46" ry="44" fill="#fcd5b5"/>
+
+                        <!-- الخدان الورديان الدافئان -->
+                        <circle cx="68" cy="116" r="10" fill="#fca5a5" opacity="0.55"/>
+                        <circle cx="118" cy="110" r="10" fill="#fca5a5" opacity="0.55"/>
+
+                        <!-- الشعر البني الكثيف المصفف بخصلات -->
+                        <path d="M46,104 C36,92 34,70 46,56 C52,38 86,30 116,38 C134,42 146,58 152,70 L138,76 L146,80 C134,86 118,86 102,80 L108,86 C90,90 72,88 58,82 C54,90 52,98 46,104 Z" fill="#6b3e19"/>
+                        <path d="M54,54 C74,40 108,40 130,52" fill="none" stroke="#4a280d" stroke-width="2" stroke-linecap="round"/>
+
+                        <!-- الحاجبان والعينان البنيتان الكبيرتان اللامعتان -->
+                        <path d="M68,88 Q74,82 82,86" fill="none" stroke="#4a280d" stroke-width="2.6" stroke-linecap="round"/>
+                        <path d="M110,82 Q116,78 122,82" fill="none" stroke="#4a280d" stroke-width="2.6" stroke-linecap="round"/>
+                        <ellipse cx="75" cy="98" rx="5" ry="6.2" fill="#451a03"/>
+                        <circle cx="73.5" cy="96" r="1.8" fill="#ffffff"/>
+                        <ellipse cx="117" cy="94" rx="5" ry="6.2" fill="#451a03"/>
+                        <circle cx="115.5" cy="92" r="1.8" fill="#ffffff"/>
+
+                        <!-- الأنف الصغير والابتسامة السعيدة بالأسنان واللسان -->
+                        <path d="M96,102 Q104,108 98,113" fill="none" stroke="#7c2d12" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M86,120 Q98,118 108,120 C106,132 90,134 86,120 Z" fill="#7f1d1d" stroke="#451a03" stroke-width="1.6"/>
+                        <path d="M88,121 Q98,120 106,121 L105,124 L89,124 Z" fill="#ffffff"/>
+                        <path d="M92,130 Q98,126 103,130 C100,132 94,132 92,130 Z" fill="#f472b6"/>
+                    </svg>`;
+                case 'hole':
+                    return `<svg viewBox="0 0 280 215" preserveAspectRatio="xMidYMid meet" class="w-full h-full">
+                        <!-- بقعة التراب البنية الممتدة حول الحفرة -->
+                        <path d="M12,136 C2,130 14,118 32,116 C56,110 92,102 146,106 C198,110 242,118 260,128 C274,136 276,154 256,164 C232,176 184,186 142,186 C104,186 78,176 58,170 C36,168 18,164 20,154 C14,148 16,142 12,136 Z" fill="#9a5c28"/>
+                        <path d="M24,138 C46,122 104,112 162,116 C214,120 250,130 256,144 C260,156 226,170 174,176 C126,182 78,172 44,162 C26,156 18,146 24,138 Z" fill="#ad6b30"/>
+
+                        <!-- كومة التراب المحفورة الداكنة خلف الحفرة (يسار) -->
+                        <path d="M52,126 C44,122 46,112 52,102 C60,88 76,68 96,68 C114,68 128,82 138,100 C144,110 144,118 134,122 C112,128 74,130 52,126 Z" fill="#7c340b"/>
+                        <path d="M52,126 C44,122 48,110 56,104 C74,106 106,104 138,108 C144,114 140,120 132,122 C108,128 74,130 52,126 Z" fill="#632606"/>
+                        <circle cx="78" cy="84" r="2" fill="#521f04"/>
+                        <circle cx="96" cy="92" r="2.2" fill="#521f04"/>
+                        <circle cx="114" cy="96" r="1.8" fill="#521f04"/>
+                        <circle cx="88" cy="108" r="2" fill="#451a03"/>
+
+                        <!-- المجرفة المغروسة في التراب على اليمين بمقبض خشبي ورأس معدني رمادي -->
+                        <g>
+                            <!-- تراب متناثر حول نصل المجرفة -->
+                            <path d="M170,122 C178,118 202,120 212,126 C202,130 178,128 170,122 Z" fill="#5c2405"/>
+                            <!-- عصا المجرفة الخشبية المائلة مع مقبض T -->
+                            <polygon points="222,18 228,20 204,100 198,98" fill="#924d14"/>
+                            <polygon points="225,19 228,20 204,100 201,99" fill="#6e3609"/>
+                            <polygon points="214,12 238,20 236,26 212,18" fill="#7c3e0d"/>
+                            <!-- نصل المجرفة المعدني الرمادي الملطخ بنقاط التراب -->
+                            <polygon points="196,94 206,97 203,107 193,104" fill="#94a3b8"/>
+                            <polygon points="180,98 218,109 212,126 176,120" fill="#cbd5e1"/>
+                            <polygon points="180,98 200,104 194,123 176,120" fill="#94a3b8" opacity="0.65"/>
+                            <circle cx="182" cy="118" r="1.6" fill="#5c2405"/>
+                            <circle cx="192" cy="121" r="1.8" fill="#5c2405"/>
+                            <circle cx="204" cy="122" r="1.5" fill="#5c2405"/>
+                            <circle cx="210" cy="120" r="1.4" fill="#5c2405"/>
+                        </g>
+
+                        <!-- الحفرة العميقة المستطيلة المحفورة في منتصف التراب -->
+                        <path d="M62,136 L78,132 L114,128 L158,128 L196,133 L218,138 L212,146 L218,154 L188,158 L142,160 L92,158 L64,152 L70,144 Z" fill="#5e2506"/>
+                        <!-- جدار الحفرة الخلفي المخطط رأسياً لإظهار العمق -->
+                        <path d="M74,132 L198,132 L212,148 L70,148 Z" fill="#82390e"/>
+                        <g fill="#5e2506" opacity="0.72">
+                            <polygon points="86,131 94,131 96,148 88,148"/>
+                            <polygon points="108,129 118,129 120,148 110,148"/>
+                            <polygon points="134,128 144,128 146,149 136,149"/>
+                            <polygon points="160,129 170,129 171,149 161,149"/>
+                            <polygon points="184,131 193,132 192,149 183,149"/>
+                        </g>
+                        <!-- قاع الحفرة الداكن جداً -->
+                        <path d="M74,148 L210,148 L206,156 L142,160 L82,156 Z" fill="#451903"/>
+                        <!-- تشققات وحواف التربة الحادة حول فتحة الحفرة -->
+                        <g stroke="#5e2506" stroke-width="1.6" stroke-linecap="round">
+                            <line x1="88" y1="131" x2="80" y2="125"/>
+                            <line x1="126" y1="128" x2="118" y2="122"/>
+                            <line x1="142" y1="128" x2="142" y2="120"/>
+                            <line x1="168" y1="129" x2="174" y2="122"/>
+                            <line x1="214" y1="154" x2="226" y2="160"/>
+                            <line x1="126" y1="159" x2="122" y2="166"/>
+                            <line x1="94" y1="158" x2="86" y2="163"/>
+                        </g>
+
+                        <!-- الحجارة الصغيرة المتناثرة في الأمام يسار ويمين -->
+                        <g>
+                            <path d="M84,166 C84,158 96,154 104,160 C110,164 108,172 98,174 C88,174 84,170 84,166 Z" fill="#7c6346"/>
+                            <path d="M90,158 C96,155 104,158 106,164 L96,168 Z" fill="#9c805e"/>
+                            <path d="M98,174 C98,166 110,162 118,168 C124,172 122,180 112,182 C102,182 98,178 98,174 Z" fill="#6b5339"/>
+                            <path d="M104,166 C110,163 118,166 120,172 L110,176 Z" fill="#8d7252"/>
+
+                            <path d="M228,154 C228,146 240,142 248,148 C254,152 252,160 242,162 C232,162 228,158 228,154 Z" fill="#6b5339"/>
+                            <path d="M234,146 C240,143 248,146 250,152 L240,156 Z" fill="#8d7252"/>
+                            <path d="M242,158 C242,150 254,146 262,152 C268,156 266,164 256,166 C246,166 242,162 242,158 Z" fill="#7c6346"/>
+                            <path d="M248,150 C254,147 262,150 264,156 L254,160 Z" fill="#9c805e"/>
+                        </g>
+                    </svg>`;
+                case 'worms':
+                    return `<svg viewBox="0 0 280 225" preserveAspectRatio="xMidYMid meet" class="w-full h-full">
+                        <defs>
+                            <!-- قالب جسم الدودة الوردية المتموجة بحلقاتها المميزة -->
+                            <g id="pinkWormBody">
+                                <path d="M10,24 C8,14 18,8 28,10 C38,12 40,22 41,34 C42,46 46,56 54,54 C64,52 72,34 86,34 C96,34 98,52 108,52 C116,52 122,42 132,42 C138,42 142,50 138,56 C134,60 128,54 124,54 C118,54 114,62 104,62 C92,62 90,46 82,46 C74,46 66,64 52,64 C38,64 34,50 32,36 C30,30 22,32 16,32 C12,32 10,28 10,24 Z" fill="#ef6a5d" stroke="#0f172a" stroke-width="2.6" stroke-linejoin="round"/>
+                                <!-- لمعة وردية فاتحة على طول الظهر -->
+                                <path d="M16,18 C22,12 32,14 35,24 C38,38 42,54 52,54 C62,54 70,38 84,38 C94,38 96,54 106,54 C114,54 122,46 130,46" fill="none" stroke="#fca5a5" stroke-width="3.6" stroke-linecap="round" opacity="0.8"/>
+                                <!-- حلقات تقسيم جسم الدودة -->
+                                <path d="M32,36 Q37,38 41,35 M37,50 Q42,52 46,49 M54,54 L56,64 M66,46 L70,56 M78,36 L82,46 M91,42 L88,52 M100,51 L98,61 M113,49 L115,59 M126,43 L127,53" fill="none" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round"/>
+                            </g>
+                        </defs>
+
+                        <!-- 1. الصف العلوي يسار: دودة لطيفة بعيون كبيرة لامعة -->
+                        <g transform="translate(4, 10) scale(0.92)">
+                            <use href="#pinkWormBody"/>
+                            <path d="M14,6 Q17,3 20,6 M29,6 Q33,3 36,6" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="17" cy="14" r="5" fill="#ffffff" stroke="#0f172a" stroke-width="1.8"/>
+                            <circle cx="18" cy="14.5" r="3" fill="#0f172a"/>
+                            <circle cx="16.8" cy="13.2" r="1.2" fill="#ffffff"/>
+                            <circle cx="32" cy="15" r="5.5" fill="#ffffff" stroke="#0f172a" stroke-width="1.8"/>
+                            <circle cx="32.5" cy="15.5" r="3.4" fill="#0f172a"/>
+                            <circle cx="31.2" cy="14" r="1.3" fill="#ffffff"/>
+                        </g>
+
+                        <!-- 2. الصف العلوي يمين: دودة دائخة بعيون حلزونية ونجوم -->
+                        <g transform="translate(142, 10) scale(0.92)">
+                            <use href="#pinkWormBody"/>
+                            <path d="M4,8 Q2,0 14,1 M42,4 Q50,8 46,16" fill="none" stroke="#0f172a" stroke-width="1.4" stroke-linecap="round"/>
+                            <circle cx="5" cy="10" r="1.5" fill="#0f172a"/>
+                            <circle cx="44" cy="17" r="1.5" fill="#0f172a"/>
+                            <circle cx="18" cy="15" r="5.5" fill="#ffffff" stroke="#0f172a" stroke-width="1.8"/>
+                            <path d="M18,15 C18,13 20,13 20,15 C20,17 16,17 16,14.5 C16,12 21,12 21,15" fill="none" stroke="#0f172a" stroke-width="1.1"/>
+                            <circle cx="33" cy="16" r="5.8" fill="#ffffff" stroke="#0f172a" stroke-width="1.8"/>
+                            <path d="M33,16 C33,14 35,14 35,16 C35,18 31,18 31,15.5 C31,13 36,13 36,16" fill="none" stroke="#0f172a" stroke-width="1.1"/>
+                        </g>
+
+                        <!-- 3. الصف الأوسط يسار: دودة نعسانة بأجفان نصف مغلقة -->
+                        <g transform="translate(4, 80) scale(0.92)">
+                            <use href="#pinkWormBody"/>
+                            <path d="M12,7 L22,6 M27,5 L37,7" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="17" cy="15" r="5" fill="#ffffff" stroke="#0f172a" stroke-width="1.8"/>
+                            <circle cx="18" cy="16" r="2.2" fill="#0f172a"/>
+                            <path d="M12,14 Q17,12 22,14 L22,11 Q17,9 12,11 Z" fill="#f472b6" stroke="#0f172a" stroke-width="1.4"/>
+                            <circle cx="32" cy="16" r="5.5" fill="#ffffff" stroke="#0f172a" stroke-width="1.8"/>
+                            <circle cx="32.5" cy="17" r="2.4" fill="#0f172a"/>
+                            <path d="M26.5,15 Q32,13 37.5,15 L37.5,12 Q32,10 26.5,12 Z" fill="#f472b6" stroke="#0f172a" stroke-width="1.4"/>
+                        </g>
+
+                        <!-- 4. الصف الأوسط يمين: دودة مندهشة بعيون واسعة -->
+                        <g transform="translate(142, 80) scale(0.92)">
+                            <use href="#pinkWormBody"/>
+                            <path d="M14,6 Q17,3 20,6 M29,5 Q33,2 36,5" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="18" cy="15" r="5.2" fill="#ffffff" stroke="#0f172a" stroke-width="1.8"/>
+                            <circle cx="19" cy="14" r="2.3" fill="#0f172a"/>
+                            <circle cx="33" cy="15" r="5.8" fill="#ffffff" stroke="#0f172a" stroke-width="1.8"/>
+                            <circle cx="34.5" cy="14" r="2.5" fill="#0f172a"/>
+                        </g>
+
+                        <!-- 5. الصف السفلي يسار: دودة متعبة بعيون ذابلة -->
+                        <g transform="translate(4, 150) scale(0.92)">
+                            <use href="#pinkWormBody"/>
+                            <path d="M12,9 Q16,6 20,5 M28,5 Q32,6 36,9" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="17" cy="15" r="5" fill="#ffffff" stroke="#0f172a" stroke-width="1.8"/>
+                            <circle cx="18" cy="15.5" r="2.3" fill="#0f172a"/>
+                            <path d="M12,21 Q17,24 22,21" fill="none" stroke="#0f172a" stroke-width="1.3"/>
+                            <circle cx="32" cy="16" r="5.5" fill="#ffffff" stroke="#0f172a" stroke-width="1.8"/>
+                            <circle cx="33" cy="16.5" r="2.4" fill="#0f172a"/>
+                            <path d="M27,22 Q32,25 37,22" fill="none" stroke="#0f172a" stroke-width="1.3"/>
+                        </g>
+
+                        <!-- 6. الصف السفلي يمين: دودة غاضبة بحاجبين معقودين -->
+                        <g transform="translate(142, 150) scale(0.92)">
+                            <use href="#pinkWormBody"/>
+                            <circle cx="18" cy="15" r="5" fill="#ffffff" stroke="#0f172a" stroke-width="1.8"/>
+                            <circle cx="19" cy="15.5" r="2.3" fill="#0f172a"/>
+                            <circle cx="33" cy="16" r="5.5" fill="#ffffff" stroke="#0f172a" stroke-width="1.8"/>
+                            <circle cx="33" cy="16" r="2.4" fill="#0f172a"/>
+                            <path d="M13,9 L24,13 M38,9 L27,13" stroke="#0f172a" stroke-width="2.6" stroke-linecap="round"/>
+                        </g>
+                    </svg>`;
+                case 'goodnews':
+                    return `<svg viewBox="0 0 240 240" preserveAspectRatio="xMidYMid meet" class="w-full h-full rounded-xl">
+                        <!-- الخلفية الصفراء بنمط البوب آرت والنقاط المشعة -->
+                        <rect x="0" y="0" width="240" height="176" fill="#f5c946"/>
+                        <g fill="#fef08a" opacity="0.65">
+                            <circle cx="48" cy="60" r="3.5"/><circle cx="64" cy="48" r="4"/><circle cx="80" cy="36" r="3.5"/>
+                            <circle cx="36" cy="84" r="3.5"/><circle cx="52" cy="80" r="4"/><circle cx="68" cy="70" r="4.5"/>
+                            <circle cx="34" cy="108" r="3.5"/><circle cx="48" cy="104" r="4"/><circle cx="196" cy="96" r="4"/>
+                            <circle cx="210" cy="112" r="3.5"/><circle cx="188" cy="116" r="4"/><circle cx="176" cy="86" r="4.5"/>
+                        </g>
+
+                        <!-- مكتب الأخبار البني في الأسفل -->
+                        <rect x="0" y="176" width="240" height="64" fill="#6d4332"/>
+                        <line x1="0" y1="176" x2="240" y2="176" stroke="#1e293b" stroke-width="2.4"/>
+
+                        <!-- فقاعة الكلام GOOD NEWS!!! على اليمين العلوي -->
+                        <path d="M142,84 C152,72 158,58 158,48 C148,38 148,18 168,12 C192,4 224,10 232,26 C238,40 226,58 202,62 C188,64 176,62 168,58 C160,68 152,76 142,84 Z" fill="#ffffff" stroke="#0f172a" stroke-width="2.2" stroke-linejoin="round"/>
+                        <text x="190" y="33" text-anchor="middle" font-size="14" font-weight="900" fill="#0f172a" class="en-text">GOOD</text>
+                        <text x="190" y="50" text-anchor="middle" font-size="14" font-weight="900" fill="#0f172a" class="en-text">NEWS!!!</text>
+
+                        <!-- المذيع ببدلته الزرقاء وربطة العنق الحمراء -->
+                        <!-- السترة الزرقاء والأكمام الممتدة على المكتب -->
+                        <path d="M62,100 L98,90 L132,90 L168,100 L194,140 C208,150 218,166 212,182 L188,208 L168,192 L176,166 L158,144 L154,186 L76,186 L72,144 L54,166 L62,192 L42,204 L20,180 C16,166 26,150 38,140 Z" fill="#0e7490" stroke="#0f172a" stroke-width="2.4" stroke-linejoin="round"/>
+                        <!-- ياقة السترة وتفاصيل الثنيات -->
+                        <path d="M88,92 L82,114 L92,120 L86,126 L115,152 L144,126 L138,120 L148,114 L142,92" fill="none" stroke="#0f172a" stroke-width="2" stroke-linejoin="round"/>
+                        <!-- القميص الأبيض وربطة العنق الحمراء -->
+                        <polygon points="98,92 132,92 126,146 104,146" fill="#ffffff" stroke="#0f172a" stroke-width="1.8"/>
+                        <polygon points="108,104 122,104 126,112 119,118 111,118 104,112" fill="#dc2626" stroke="#0f172a" stroke-width="1.8"/>
+                        <polygon points="111,118 119,118 124,146 115,152 106,146" fill="#dc2626" stroke="#0f172a" stroke-width="1.8"/>
+
+                        <!-- الرقبة والرأس والشعر الداكن المصفف والابتسامة الودودة -->
+                        <path d="M98,80 L132,80 L130,98 L115,106 L100,98 Z" fill="#fcd9b8" stroke="#0f172a" stroke-width="2"/>
+                        <path d="M92,50 C92,30 138,30 138,50 C138,70 130,88 115,88 C100,88 92,70 92,50 Z" fill="#fcd9b8" stroke="#0f172a" stroke-width="2.2"/>
+                        <!-- الأذنان -->
+                        <path d="M92,56 C88,54 88,68 94,70" fill="#fcd9b8" stroke="#0f172a" stroke-width="2"/>
+                        <path d="M138,56 C142,54 142,68 136,70" fill="#fcd9b8" stroke="#0f172a" stroke-width="2"/>
+                        <!-- الشعر الداكن المموج -->
+                        <path d="M90,54 C88,36 96,24 112,24 C128,24 140,34 138,54 L135,54 C136,42 130,36 122,36 C110,36 100,38 94,54 Z" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
+                        <path d="M98,32 Q112,26 126,32" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round"/>
+                        <!-- الحاجبان والعينان الزرقاوان والأنف والابتسامة -->
+                        <path d="M99,50 Q105,47 111,50 M119,50 Q125,47 131,50" fill="none" stroke="#0f172a" stroke-width="2.2" stroke-linecap="round"/>
+                        <ellipse cx="105" cy="56" rx="4" ry="2.2" fill="#ffffff" stroke="#0f172a" stroke-width="1.2"/>
+                        <circle cx="105" cy="56" r="1.8" fill="#0284c7"/>
+                        <ellipse cx="125" cy="56" rx="4" ry="2.2" fill="#ffffff" stroke="#0f172a" stroke-width="1.2"/>
+                        <circle cx="125" cy="56" r="1.8" fill="#0284c7"/>
+                        <path d="M115,58 L113,66 Q115,68 117,66" fill="none" stroke="#0f172a" stroke-width="1.4" stroke-linecap="round"/>
+                        <path d="M104,72 Q115,75 126,72 C122,78 108,78 104,72 Z" fill="#ffffff" stroke="#0f172a" stroke-width="1.6"/>
+
+                        <!-- أوراق الأخبار البيضاء في يدي المذيع -->
+                        <path d="M70,144 Q115,156 160,142 L152,196 Q115,204 82,196 Z" fill="#ffffff" stroke="#0f172a" stroke-width="2.4" stroke-linejoin="round"/>
+                        <path d="M74,142 Q115,152 158,140" fill="none" stroke="#0f172a" stroke-width="1.4"/>
+
+                        <!-- اليدان تمسكان بأوراق الأخبار على المكتب -->
+                        <path d="M52,192 L74,174 L104,186 C108,188 106,194 100,194 L102,198 C96,204 84,210 74,210 L54,198 Z" fill="#fcd9b8" stroke="#0f172a" stroke-width="2.2" stroke-linejoin="round"/>
+                        <path d="M180,194 L158,176 L128,188 C124,190 126,196 132,196 L130,200 C136,206 148,212 158,212 L178,200 Z" fill="#fcd9b8" stroke="#0f172a" stroke-width="2.2" stroke-linejoin="round"/>
+                    </svg>`;
+                case 'diningroom':
+                    return `<svg viewBox="0 0 245 240" preserveAspectRatio="xMidYMid meet" class="w-full h-full">
+                        <!-- سجادة أرضية بيضاء ناعمة تحت الطاولة والكرسيين -->
+                        <polygon points="16,206 116,184 226,204 198,224 124,234 40,226" fill="#e2e8f0" opacity="0.7"/>
+
+                        <!-- وحدة المطبخ الخلفية (الخزانة العلوية، الحوض، والغسالة) -->
+                        <g stroke="#451a03" stroke-width="1.8" stroke-linejoin="round">
+                            <!-- الخلفية البيضاء المبلطة -->
+                            <rect x="128" y="8" width="94" height="72" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+                            <!-- الخزانة الخشبية العلوية -->
+                            <rect x="122" y="6" width="84" height="40" rx="2" fill="#d97706"/>
+                            <rect x="124" y="8" width="36" height="36" fill="#fb923c"/>
+                            <path d="M153,22 C156,22 156,30 153,30" fill="none" stroke="#451a03" stroke-width="2"/>
+                            <rect x="164" y="9" width="38" height="34" fill="#9a5632"/>
+                            <line x1="164" y1="26" x2="202" y2="26" stroke="#fb923c" stroke-width="3"/>
+                            <!-- أطباق وأوعية داخل الرف المفتوح -->
+                            <ellipse cx="176" cy="22" rx="9" ry="4" fill="#7dd3fc" stroke="#1e293b" stroke-width="1.2"/>
+                            <ellipse cx="176" cy="18" rx="8" ry="3.5" fill="#bae6fd" stroke="#1e293b" stroke-width="1.2"/>
+                            <path d="M188,18 L198,18 L196,25 L190,25 Z" fill="#f97316" stroke="#451a03" stroke-width="1.2"/>
+                            <path d="M174,34 L198,34 C196,42 176,42 174,34 Z" fill="#dcfce7" stroke="#1e293b" stroke-width="1.2"/>
+
+                            <!-- سطح الكاونتر والحوض الأزرق والصنبور -->
+                            <polygon points="88,78 130,68 224,74 214,88 88,82" fill="#fde68a"/>
+                            <polygon points="134,79 152,71 184,73 172,83" fill="#7dd3fc" stroke="#0369a1" stroke-width="1.6"/>
+                            <path d="M168,72 C172,56 178,52 170,58" fill="none" stroke="#334155" stroke-width="2.2" stroke-linecap="round"/>
+                            <!-- إناء الملاعق الخشبية الأحمر على اليمين وآلة القهوة على اليسار -->
+                            <rect x="114" y="60" width="14" height="16" rx="2" fill="#ea580c"/>
+                            <rect x="117" y="64" width="8" height="8" fill="#bae6fd"/>
+                            <path d="M200,66 L214,66 L212,80 C210,83 202,83 200,80 Z" fill="#ef4444"/>
+                            <line x1="204" y1="66" x2="202" y2="56" stroke="#d97706" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="208" y1="66" x2="209" y2="55" stroke="#d97706" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="211" y1="66" x2="215" y2="58" stroke="#d97706" stroke-width="2.5" stroke-linecap="round"/>
+
+                            <!-- خزائن الكاونتر السفلية والغسالة الزرقاء -->
+                            <rect x="92" y="82" width="122" height="66" fill="#fb923c"/>
+                            <rect x="96" y="86" width="32" height="58" fill="#fdba74"/>
+                            <rect x="131" y="86" width="34" height="58" fill="#fdba74"/>
+                            <rect x="168" y="86" width="42" height="58" fill="#7dd3fc" stroke="#0369a1" stroke-width="1.6"/>
+                            <circle cx="180" cy="95" r="3" fill="#38bdf8" stroke="#0369a1" stroke-width="1.2"/>
+                            <circle cx="192" cy="95" r="2.2" fill="#38bdf8" stroke="#0369a1" stroke-width="1.2"/>
+                            <circle cx="202" cy="95" r="2.2" fill="#38bdf8" stroke="#0369a1" stroke-width="1.2"/>
+                        </g>
+
+                        <!-- طاولة الطعام الدائرية الخشبية في المنتصف -->
+                        <g stroke="#451a03" stroke-width="2" stroke-linejoin="round">
+                            <!-- أرجل الطاولة الخشبية -->
+                            <polygon points="66,126 78,126 84,202 74,202" fill="#a86a3d"/>
+                            <polygon points="154,126 168,126 172,196 160,196" fill="#a86a3d"/>
+                            <polygon points="108,132 130,132 128,228 118,228" fill="#c28353"/>
+                            <!-- سطح الطاولة الدائري -->
+                            <ellipse cx="116" cy="116" rx="64" ry="20" fill="#b47b4a"/>
+                            <ellipse cx="116" cy="112" rx="64" ry="18" fill="#f3cfa7"/>
+
+                            <!-- أدوات المائدة فوق الطاولة -->
+                            <!-- الطبق والسكين على اليسار -->
+                            <ellipse cx="75" cy="110" rx="14" ry="5" fill="#ea580c" stroke-width="1.4"/>
+                            <ellipse cx="75" cy="108" rx="11" ry="3.8" fill="#fef3c7" stroke-width="1.2"/>
+                            <line x1="78" y1="120" x2="92" y2="116" stroke="#475569" stroke-width="2.2" stroke-linecap="round"/>
+                            <!-- الإبريق الأخضر -->
+                            <path d="M92,94 L106,94 L109,110 C104,114 94,114 90,110 Z" fill="#84cc16" stroke="#365314" stroke-width="1.5"/>
+                            <path d="M92,96 C86,96 86,104 91,106" fill="none" stroke="#365314" stroke-width="1.8"/>
+                            <!-- الوعاء البرتقالي والفنجان والمنديل الأحمر -->
+                            <rect x="118" y="108" width="32" height="7" rx="2" fill="#ef4444" stroke-width="1.3"/>
+                            <path d="M102,106 L124,106 C122,118 104,118 102,106 Z" fill="#f97316" stroke-width="1.5"/>
+                            <ellipse cx="113" cy="106" rx="11" ry="3" fill="#fde68a" stroke-width="1.2"/>
+                            <path d="M126,98 L144,98 C143,110 127,110 126,98 Z" fill="#f97316" stroke-width="1.5"/>
+                            <path d="M144,101 C150,100 150,107 143,107" fill="none" stroke="#451a03" stroke-width="1.8"/>
+                            <ellipse cx="135" cy="98" rx="9" ry="2.5" fill="#fef3c7" stroke-width="1.2"/>
+                        </g>
+
+                        <!-- الكرسي الخشبي الأيسر بوسادته البرتقالية الحمراء -->
+                        <g stroke="#451a03" stroke-width="2" stroke-linejoin="round">
+                            <!-- أرجل الكرسي الأيسر -->
+                            <path d="M18,162 L18,208 L26,208 L28,164 Z" fill="#a86a3d"/>
+                            <path d="M38,168 L38,232 L46,232 L48,168 Z" fill="#c28353"/>
+                            <path d="M84,166 C94,184 96,204 92,220 L84,220 C88,204 86,186 76,170 Z" fill="#c28353"/>
+                            <path d="M46,200 L86,192" stroke="#c28353" stroke-width="4"/>
+                            <!-- المقعد والوسادة البرتقالية الحمراء -->
+                            <polygon points="22,158 58,144 96,162 56,174" fill="#d97706"/>
+                            <path d="M24,154 C36,144 50,136 60,138 C76,144 92,152 90,158 C78,166 56,170 42,168 C30,166 22,162 24,154 Z" fill="#f94c24"/>
+                            <path d="M56,151 L62,155 M62,151 L56,155" stroke="#7c2d12" stroke-width="1.2"/>
+                            <!-- ظهر الكرسي الأيسر -->
+                            <path d="M2,82 C16,80 34,88 42,96 L48,168 L38,168 L30,104 L14,96 L26,156 L18,158 Z" fill="#d69e6c"/>
+                            <line x1="16" y1="98" x2="26" y2="152" stroke="#a86a3d" stroke-width="3.5"/>
+                            <line x1="25" y1="102" x2="34" y2="150" stroke="#a86a3d" stroke-width="3.5"/>
+                        </g>
+
+                        <!-- الكرسي الخشبي الأيمن بوسادته البرتقالية الحمراء -->
+                        <g stroke="#451a03" stroke-width="2" stroke-linejoin="round">
+                            <!-- أرجل الكرسي الأيمن -->
+                            <path d="M218,162 L218,208 L226,208 L226,164 Z" fill="#a86a3d"/>
+                            <path d="M196,168 L196,226 L204,226 L206,168 Z" fill="#c28353"/>
+                            <path d="M158,166 C148,184 146,200 150,214 L158,214 C154,200 156,184 166,170 Z" fill="#c28353"/>
+                            <path d="M156,192 L196,198" stroke="#c28353" stroke-width="4"/>
+                            <!-- المقعد والوسادة البرتقالية الحمراء -->
+                            <polygon points="146,160 184,144 222,158 186,174" fill="#d97706"/>
+                            <path d="M152,154 C164,144 176,136 188,138 C202,144 218,150 218,158 C206,166 184,170 170,168 C158,166 150,160 152,154 Z" fill="#f94c24"/>
+                            <path d="M180,151 L186,155 M186,151 L180,155" stroke="#7c2d12" stroke-width="1.2"/>
+                            <!-- ظهر الكرسي الأيمن -->
+                            <path d="M242,84 C228,82 210,88 202,96 L196,168 L206,168 L214,104 L230,96 L218,156 L226,158 Z" fill="#d69e6c"/>
+                            <line x1="226" y1="98" x2="216" y2="152" stroke="#a86a3d" stroke-width="3.5"/>
+                            <line x1="217" y1="102" x2="208" y2="150" stroke="#a86a3d" stroke-width="3.5"/>
+                        </g>
+                    </svg>`;
+                case 'hometheater':
+                    return `<svg viewBox="0 0 280 180" preserveAspectRatio="xMidYMid meet" class="w-full h-full rounded-xl">
+                        <defs>
+                            <linearGradient id="cinemaScreenGlow" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#5d83a8"/>
+                                <stop offset="50%" stop-color="#8cb3cf"/>
+                                <stop offset="100%" stop-color="#6084a8"/>
+                            </linearGradient>
+                            <linearGradient id="aisleWarmGlow" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#fde68a"/>
+                                <stop offset="28%" stop-color="#fb7185"/>
+                                <stop offset="68%" stop-color="#e11d48"/>
+                                <stop offset="100%" stop-color="#4c0519"/>
+                            </linearGradient>
+                            <linearGradient id="seatRedGrad" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#ef4444"/>
+                                <stop offset="45%" stop-color="#b91c1c"/>
+                                <stop offset="100%" stop-color="#450a0a"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- جدران وسقف قاعة السينما المنزلية الداكنة -->
+                        <rect x="0" y="0" width="280" height="180" fill="#171738"/>
+                        <polygon points="0,0 280,0 230,18 50,18" fill="#2e183b"/>
+                        <!-- مصابيح السقف الدافئة والشريط الأحمر فوق الشاشة -->
+                        <g fill="#fde68a">
+                            <ellipse cx="76" cy="4" rx="4" ry="1.5"/>
+                            <ellipse cx="106" cy="6" rx="3.5" ry="1.5"/>
+                            <ellipse cx="140" cy="6" rx="3.5" ry="1.5"/>
+                            <ellipse cx="174" cy="6" rx="3.5" ry="1.5"/>
+                            <ellipse cx="204" cy="4" rx="4" ry="1.5"/>
+                        </g>
+                        <rect x="96" y="13" width="88" height="3.5" fill="#f97316"/>
+
+                        <!-- السماعات الجانبية على الجدارين -->
+                        <polygon points="0,6 40,24 36,52 0,38" fill="#4c1d4b"/>
+                        <polygon points="280,6 240,24 244,52 280,38" fill="#4c1d4b"/>
+
+                        <!-- شاشة العرض السينمائية العريضة المضيئة -->
+                        <rect x="92" y="21" width="96" height="36" fill="#47668a"/>
+                        <rect x="95" y="24" width="90" height="30" fill="url(#cinemaScreenGlow)"/>
+
+                        <!-- الممر الأوسط المضيء بالدرجات المؤدية للشاشة -->
+                        <polygon points="133,66 147,66 184,180 96,180" fill="url(#aisleWarmGlow)"/>
+                        <g stroke="#9f1239" stroke-width="1" opacity="0.55">
+                            <line x1="131" y1="74" x2="149" y2="74"/>
+                            <line x1="128" y1="84" x2="152" y2="84"/>
+                            <line x1="124" y1="96" x2="156" y2="96"/>
+                            <line x1="119" y1="110" x2="161" y2="110"/>
+                            <line x1="113" y1="128" x2="167" y2="128"/>
+                            <line x1="106" y1="150" x2="174" y2="150"/>
+                        </g>
+
+                        <!-- صفوف مقاعد السينما الحمراء المخملية (يسار ويمين بتدرج المنظور) -->
+                        <!-- الصفوف البعيدة -->
+                        <path d="M52,68 L131,66 L128,82 L30,84 Z" fill="#ef4444" opacity="0.85"/>
+                        <path d="M228,68 L149,66 L152,82 L250,84 Z" fill="#ef4444" opacity="0.85"/>
+                        <!-- الصفوف الوسطى -->
+                        <g fill="url(#seatRedGrad)" stroke="#450a0a" stroke-width="1">
+                            <rect x="2" y="78" width="26" height="22" rx="6"/>
+                            <rect x="28" y="78" width="28" height="22" rx="6"/>
+                            <rect x="56" y="78" width="28" height="22" rx="6"/>
+                            <rect x="84" y="78" width="26" height="22" rx="6"/>
+                            <rect x="108" y="78" width="20" height="22" rx="5"/>
+
+                            <rect x="152" y="78" width="20" height="22" rx="5"/>
+                            <rect x="170" y="78" width="26" height="22" rx="6"/>
+                            <rect x="196" y="78" width="28" height="22" rx="6"/>
+                            <rect x="224" y="78" width="28" height="22" rx="6"/>
+                            <rect x="252" y="78" width="26" height="22" rx="6"/>
+                        </g>
+                        <!-- الصف قبل الأمامي -->
+                        <g fill="url(#seatRedGrad)" stroke="#450a0a" stroke-width="1.3">
+                            <rect x="0" y="96" width="44" height="36" rx="9"/>
+                            <rect x="56" y="96" width="52" height="36" rx="9"/>
+                            <rect x="92" y="94" width="32" height="32" rx="8"/>
+
+                            <rect x="156" y="94" width="32" height="32" rx="8"/>
+                            <rect x="172" y="96" width="52" height="36" rx="9"/>
+                            <rect x="236" y="96" width="44" height="36" rx="9"/>
+                        </g>
+                        <!-- المقعدان الأماميان الكبيران في المقدمة يسار ويمين مع لمعة الإضاءة البرتقالية -->
+                        <g>
+                            <!-- المقعد الأمامي الأيسر -->
+                            <path d="M12,118 C14,108 76,108 86,118 L90,178 L24,178 Z" fill="url(#seatRedGrad)" stroke="#2e0615" stroke-width="2"/>
+                            <path d="M14,116 C28,110 72,110 84,116" fill="none" stroke="#fca5a5" stroke-width="2.5" stroke-linecap="round"/>
+                            <polygon points="88,130 104,130 96,178 82,178" fill="#fb923c"/>
+                            <polygon points="88,136 102,136 96,178 82,178" fill="#450a0a"/>
+
+                            <!-- المقعد الأمامي الأيمن -->
+                            <path d="M194,118 C204,108 266,108 268,118 L256,178 L190,178 Z" fill="url(#seatRedGrad)" stroke="#2e0615" stroke-width="2"/>
+                            <path d="M196,116 C208,110 252,110 266,116" fill="none" stroke="#fca5a5" stroke-width="2.5" stroke-linecap="round"/>
+                            <polygon points="176,130 192,130 198,178 184,178" fill="#fb923c"/>
+                            <polygon points="178,136 192,136 198,178 184,178" fill="#450a0a"/>
+                        </g>
+                    </svg>`;
+                case 'envy':
+                    return `<svg viewBox="0 0 280 230" preserveAspectRatio="xMidYMid meet" class="w-full h-full">
+                        <!-- 1. الشخص الحسود المشتعل غيرة في اليسار -->
+                        <g>
+                            <!-- ألسنة اللهب البرتقالية والصفراء المشتعلة خلف رأسه -->
+                            <path d="M22,90 C14,76 26,64 26,52 C24,42 30,36 34,32 C32,42 38,50 48,48 C54,32 62,18 52,4 C68,10 78,24 72,42 C78,44 82,36 88,36 C82,48 82,58 92,62 C104,68 106,86 92,92 C76,98 34,98 22,90 Z" fill="#fbbf24"/>
+                            <path d="M36,88 C32,76 42,68 46,56 C52,46 64,34 62,22 C70,32 74,46 72,56 C82,58 88,68 84,82 C76,92 44,94 36,88 Z" fill="#f97316" opacity="0.6"/>
+
+                            <!-- البنطال الرمادي والقميص الأبيض والأذرع بقبضتين مشدودتين -->
+                            <polygon points="18,186 76,192 78,228 14,228" fill="#94a3b8" stroke="#4a2511" stroke-width="2.4" stroke-linejoin="round"/>
+                            <path d="M24,102 C36,96 66,98 78,108 C88,120 90,152 84,166 C76,170 68,162 66,154 L76,192 L18,186 L20,158 C8,162 2,158 4,144 C6,124 12,108 24,102 Z" fill="#ffffff" stroke="#4a2511" stroke-width="2.4" stroke-linejoin="round"/>
+                            <!-- ياقة القميص وخط الأزرار -->
+                            <path d="M40,98 L54,114 L64,102 M56,114 L56,188" fill="none" stroke="#4a2511" stroke-width="2"/>
+                            <!-- الذراعان المشدودتان بقبضتين أمام الصدر -->
+                            <path d="M10,148 L44,132 L54,142 L26,158" fill="#ffffff" stroke="#4a2511" stroke-width="2.2" stroke-linecap="round"/>
+                            <circle cx="52" cy="134" r="9" fill="#fde6d2" stroke="#4a2511" stroke-width="2.2"/>
+                            <circle cx="70" cy="138" r="9" fill="#fde6d2" stroke="#4a2511" stroke-width="2.2"/>
+                            <!-- خطوط الارتجاف من الغضب -->
+                            <path d="M20,98 L24,95 M80,104 L84,106" stroke="#4a2511" stroke-width="2" stroke-linecap="round"/>
+
+                            <!-- الرأس والشعر البني وملامح الحسد والغضب -->
+                            <ellipse cx="60" cy="82" rx="18" ry="20" fill="#fde6d2" stroke="#4a2511" stroke-width="2.4"/>
+                            <path d="M42,78 C38,62 56,52 72,58 C80,62 82,74 78,80 C74,72 68,68 62,72 C56,66 48,72 42,78 Z" fill="#8d553e" stroke="#4a2511" stroke-width="2.2" stroke-linejoin="round"/>
+                            <!-- الحاجبان الغاضبان والعيون والفم المكشّر -->
+                            <path d="M56,74 L64,78 M74,76 L67,79" stroke="#4a2511" stroke-width="2.2" stroke-linecap="round"/>
+                            <circle cx="60" cy="80" r="1.8" fill="#4a2511"/>
+                            <circle cx="70" cy="81" r="1.8" fill="#4a2511"/>
+                            <path d="M56,92 C60,88 68,90 70,94 L56,94 Z" fill="#ffffff" stroke="#4a2511" stroke-width="1.8" stroke-linejoin="round"/>
+                        </g>
+
+                        <!-- 2. الشخص الفائز السعيد يقبّل الكأس الذهبي في اليمين -->
+                        <g>
+                            <!-- القلب الوردي الصغير بين وجهه والكأس -->
+                            <path d="M202,48 C202,42 208,42 208,48 C210,43 216,45 213,50 L205,60 L202,48 Z" fill="#fb7185"/>
+
+                            <!-- البنطال الرمادي والقميص الأبيض الواسع -->
+                            <polygon points="110,202 186,204 190,228 106,228" fill="#94a3b8" stroke="#4a2511" stroke-width="2.4" stroke-linejoin="round"/>
+                            <path d="M138,76 C158,76 178,86 196,104 L236,120 L254,96 L266,106 L236,154 L190,136 L186,204 L110,202 L112,130 C104,104 114,82 138,76 Z" fill="#ffffff" stroke="#4a2511" stroke-width="2.4" stroke-linejoin="round"/>
+                            <!-- ياقة القميص وخط المنتصف -->
+                            <path d="M140,74 L156,98 L166,86 M168,88 L172,96" fill="none" stroke="#4a2511" stroke-width="2"/>
+
+                            <!-- الرأس الجانبي المبتسم السعيد وهو يقبّل الكأس -->
+                            <path d="M146,66 C146,42 186,38 190,56 C192,62 194,64 191,68 C194,72 190,76 188,78 C182,82 174,80 166,82 L162,92 L144,78 Z" fill="#fde6d2" stroke="#4a2511" stroke-width="2.4" stroke-linejoin="round"/>
+                            <!-- الشعر البني الكثيف المموج -->
+                            <path d="M144,68 C134,54 134,30 156,22 C176,16 198,28 198,42 C196,50 192,54 188,50 C182,56 172,56 164,50 C162,62 152,66 144,68 Z" fill="#7c4a35" stroke="#4a2511" stroke-width="2.4" stroke-linejoin="round"/>
+                            <!-- الأذن والعين المغلقة بسعادة والخد الوردي -->
+                            <path d="M154,54 C150,50 150,62 156,62" fill="#fde6d2" stroke="#4a2511" stroke-width="2"/>
+                            <path d="M179,54 Q183,51 186,54" fill="none" stroke="#4a2511" stroke-width="2" stroke-linecap="round"/>
+                            <ellipse cx="183" cy="60" rx="3.5" ry="1.8" fill="#fca5a5" opacity="0.75"/>
+
+                            <!-- الكأس الذهبي الكبير اللامع بقاعدته البنية -->
+                            <g transform="rotate(-8 228 106)">
+                                <!-- القاعدة الخشبية البنية للكأس -->
+                                <polygon points="212,146 248,146 250,158 210,158" fill="#9a5632" stroke="#4a2511" stroke-width="2.2" stroke-linejoin="round"/>
+                                <rect x="220" y="149" width="18" height="5" fill="#d6d3d1" stroke="#4a2511" stroke-width="1.2"/>
+                                <!-- ساق الكأس الذهبي -->
+                                <path d="M222,114 L238,114 L235,138 L244,146 L216,146 L225,138 Z" fill="#fbbf24" stroke="#4a2511" stroke-width="2.2" stroke-linejoin="round"/>
+                                <!-- مقابض الكأس المقوسة يمين ويسار -->
+                                <path d="M204,72 C180,66 176,94 202,102 L212,108" fill="none" stroke="#4a2511" stroke-width="6.5" stroke-linecap="round"/>
+                                <path d="M204,72 C180,66 176,94 202,102 L212,108" fill="none" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+                                <path d="M254,72 C278,66 282,94 256,102 L246,108" fill="none" stroke="#4a2511" stroke-width="6.5" stroke-linecap="round"/>
+                                <path d="M254,72 C278,66 282,94 256,102 L246,108" fill="none" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+                                <!-- جسم الكأس الذهبي الرئيسي مع اللمعات البيضاء -->
+                                <path d="M202,64 L256,64 C256,96 244,114 230,114 C216,114 202,96 202,64 Z" fill="#fbbf24" stroke="#4a2511" stroke-width="2.4" stroke-linejoin="round"/>
+                                <ellipse cx="229" cy="64" rx="27" ry="6" fill="#d97706" stroke="#4a2511" stroke-width="2.2"/>
+                                <path d="M210,76 L212,92" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                <path d="M244,82 L246,86 L250,88 L246,90 L244,94 L242,90 L238,88 L242,86 Z" fill="#ffffff"/>
+                            </g>
+
+                            <!-- الذراع اليسرى واليدان تمسكان بمقبضي الكأس -->
+                            <path d="M112,126 L142,172 C148,180 158,180 166,170 L198,122 L184,112 L152,152 L134,106" fill="#ffffff" stroke="#4a2511" stroke-width="2.4" stroke-linejoin="round"/>
+                            <path d="M184,112 L190,94 C198,90 208,98 206,108 L196,120 Z" fill="#fde6d2" stroke="#4a2511" stroke-width="2.2" stroke-linejoin="round"/>
+                            <path d="M254,96 L262,80 C272,78 278,88 272,98 L264,106 Z" fill="#fde6d2" stroke="#4a2511" stroke-width="2.2" stroke-linejoin="round"/>
+                        </g>
+                    </svg>`;
+                default:
+                    return '';
+            }
+        }
+
+        function renderVocabSection(list, containerId, startIndex) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            container.innerHTML = '';
+
+            list.forEach((item, idx) => {
+                const num = startIndex + idx;
+                const cardId = `vocab-card-${item.id}`;
+                const escapedSpeak = item.speak.replace(/'/g, "\\'");
+
+                const card = document.createElement('div');
+                card.id = cardId;
+                card.setAttribute('data-speak', item.speak);
+                card.onclick = () => speakText(item.speak, null, false, cardId);
+                card.className = `sentence-box clickable-phrase bg-white hover:bg-sky-50/70 rounded-3xl border-2 ${item.borderColor} hover:border-amber-400 p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-between gap-3 group`;
+
+                card.innerHTML = `
+                    <div class="flex-1 space-y-1.5 text-center">
+                        <div class="flex items-center justify-center gap-2">
+                            <span class="w-7 h-7 rounded-full ${item.badgeColor} text-white font-black text-xs flex items-center justify-center shrink-0 en-text">${num}</span>
+                            <span class="w-7 h-7 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center text-xs">
+                                <i class="fa-solid fa-volume-high"></i>
+                            </span>
+                        </div>
+                        <h3 class="sentence-text en-text text-xl sm:text-2xl font-black text-slate-900">${item.en}</h3>
+                        <p dir="rtl" class="arabic-meaning text-xs sm:text-sm font-extrabold ${item.tagBg} inline-block px-3.5 py-0.5 rounded-full border">${item.ar}</p>
+                    </div>
+                    <div class="w-28 h-24 rounded-2xl bg-white border border-slate-100 p-1.5 flex items-center justify-center shrink-0 overflow-hidden shadow-inner">
+                        <div class="w-full h-full animate-float group-hover:scale-105 transition-transform flex items-center justify-center">
+                            ${getVocabSvg(item.id)}
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        let areArabicMeaningsHidden = false;
+
+        function toggleArabicMeanings() {
+            areArabicMeaningsHidden = !areArabicMeaningsHidden;
+            const labels = document.querySelectorAll('.arabic-meaning');
+            const btnLabel = document.getElementById('toggle-ar-label');
+            const btnIcon = document.querySelector('#toggle-ar-btn i');
+
+            labels.forEach(el => {
+                if (areArabicMeaningsHidden) {
+                    el.classList.add('opacity-0', 'select-none');
+                } else {
+                    el.classList.remove('opacity-0', 'select-none');
+                }
+            });
+
+            if (btnLabel) {
+                btnLabel.textContent = areArabicMeaningsHidden ? 'إظهار الترجمة العربية' : 'إخفاء الترجمة العربية';
+            }
+            if (btnIcon) {
+                btnIcon.className = areArabicMeaningsHidden ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash';
+            }
+            showToast(areArabicMeaningsHidden ? 'تم إخفاء الترجمة العربية لاختبار حفظك!' : 'تم إظهار الترجمة العربية!');
+        }
+
+        async function playSectionWords(sectionKey) {
+            const list = sectionKey === 'story' ? storyVocabData : listeningVocabData;
+            stopAudio();
+            isSequencePlaying = true;
+            const mySession = speechSessionCounter;
+
+            try {
+                for (let i = 0; i < list.length; i++) {
+                    if (!isSequencePlaying || mySession !== speechSessionCounter) break;
+                    const item = list[i];
+                    await speakText(item.speak, null, true, `vocab-card-${item.id}`);
+                    if (!isSequencePlaying || mySession !== speechSessionCounter) break;
+                    if (i < list.length - 1) {
+                        await new Promise(res => {
+                            const t = setTimeout(res, 480);
+                            activeTimeouts.push(t);
+                        });
+                    }
+                }
+            } finally {
+                if (mySession === speechSessionCounter) {
+                    isSequencePlaying = false;
+                    clearHighlights();
+                    hideLiveReadingToast();
+                    setSpeakingUI(false);
+                }
+            }
+        }
+
+        // --- الاختبار التفاعلي السريع ---
+        const allVocabCombined = [...storyVocabData, ...listeningVocabData];
+        let currentQuizIdx = 0;
+        let quizScore = 0;
+        let isQuizTransitioning = false;
+
+        function renderQuizQuestion() {
+            try {
+                const targetItem = allVocabCombined[currentQuizIdx];
+                const promptEl = document.getElementById('quiz-prompt-ar');
+                const optsEl = document.getElementById('quiz-options');
+                const feedbackEl = document.getElementById('quiz-feedback');
+
+                if (promptEl) promptEl.textContent = targetItem.ar;
+                if (feedbackEl) feedbackEl.classList.add('hidden');
+
+                const distractors = allVocabCombined
+                    .filter(v => v.id !== targetItem.id)
+                    .sort(() => Math.random() - 0.5)
+                    .slice(0, 2);
+
+                const options = [targetItem, ...distractors].sort(() => Math.random() - 0.5);
+
+                if (optsEl) {
+                    optsEl.innerHTML = '';
+                    options.forEach(opt => {
+                        const btn = document.createElement('button');
+                        btn.type = 'button';
+                        btn.className = 'en-text bg-white hover:bg-emerald-50 border-2 border-slate-200 hover:border-emerald-400 text-slate-800 font-extrabold text-lg py-3 px-4 rounded-2xl shadow-sm transition cursor-pointer';
+                        btn.textContent = opt.en;
+                        btn.onclick = () => handleQuizAnswer(opt, targetItem, btn);
+                        optsEl.appendChild(btn);
+                    });
+                }
+            } catch (err) {
+                console.error('Error rendering quiz:', err);
+            }
+        }
+
+        function speakCurrentQuizWord() {
+            const targetItem = allVocabCombined[currentQuizIdx];
+            if (targetItem) speakText(targetItem.speak);
+        }
+
+        async function handleQuizAnswer(chosenItem, targetItem, btnEl) {
+            if (isQuizTransitioning) return;
+            const feedbackEl = document.getElementById('quiz-feedback');
+            if (!feedbackEl) return;
+
+            feedbackEl.classList.remove('hidden', 'bg-emerald-100', 'text-emerald-800', 'border-emerald-300', 'bg-rose-100', 'text-rose-800', 'border-rose-300');
+            btnEl.classList.remove('shake');
+
+            if (chosenItem.id === targetItem.id) {
+                stopAudio();
+                isQuizTransitioning = true;
+                const mySession = speechSessionCounter;
+
+                quizScore += 10;
+                const scoreEl = document.getElementById('quiz-score');
+                if (scoreEl) scoreEl.textContent = quizScore;
+
+                feedbackEl.textContent = `ممتاز! الإجابة الصحيحة هي: ${targetItem.en} (${targetItem.ar})`;
+                feedbackEl.classList.add('bg-emerald-100', 'text-emerald-800', 'border', 'border-emerald-300');
+                btnEl.classList.add('border-emerald-500', 'bg-emerald-50', 'ring-4', 'ring-emerald-300');
+                showToast(`رائع! +10 نقاط`);
+
+                try {
+                    await speakText(`Great job! ${targetItem.speak}!`, null, true);
+                    if (mySession !== speechSessionCounter) return;
+
+                    await new Promise(res => {
+                        const timer = setTimeout(res, 750);
+                        activeTimeouts.push(timer);
+                    });
+                    if (mySession !== speechSessionCounter) return;
+
+                    currentQuizIdx = (currentQuizIdx + 1) % allVocabCombined.length;
+                    isQuizTransitioning = false;
+                    renderQuizQuestion();
+                } finally {
+                    if (mySession === speechSessionCounter) {
+                        isQuizTransitioning = false;
+                    }
+                }
+            } else {
+                btnEl.classList.add('shake');
+                feedbackEl.textContent = `كلمة (${chosenItem.en}) تعني (${chosenItem.ar}). حاول مرة أخرى!`;
+                feedbackEl.classList.add('bg-rose-100', 'text-rose-800', 'border', 'border-rose-300');
+                speakText(`Try again! ${chosenItem.speak}`);
+            }
+        }
+
+        // ==========================================
+        // نظام الصوت التعليمي الهادئ للمعلمة
+        // ==========================================
+        let preferMaleTeacher = false;
+        let isSlowTrainingMode = false;
+        let isSequencePlaying = false;
+        let activeTimeouts = [];
+        let speechSessionCounter = 0;
+
+        function getCurrentSpeechRate() {
+            return isSlowTrainingMode ? 0.65 : 0.76;
+        }
+
+        function showLiveReadingToast(txt) {
+            const toast = document.getElementById('liveReadingToast');
+            const wordEl = document.getElementById('toastWord');
+            const rateEl = document.getElementById('toastRateLabel');
+            if (rateEl) rateEl.innerText = `Calm Educational Voice (${getCurrentSpeechRate()}x):`;
+            if (wordEl) wordEl.innerText = txt;
+            if (toast) {
+                toast.classList.remove('opacity-0', 'translate-y-8');
+                toast.classList.add('opacity-100', 'translate-y-0');
+            }
+        }
+
+        function hideLiveReadingToast() {
+            const toast = document.getElementById('liveReadingToast');
+            if (toast) {
+                toast.classList.add('opacity-0', 'translate-y-8');
+                toast.classList.remove('opacity-100', 'translate-y-0');
+            }
+        }
+
+        function toggleSpeechSpeed() {
+            isSlowTrainingMode = !isSlowTrainingMode;
+            const speedLabel = document.getElementById('speed-label');
+            if (speedLabel) {
+                speedLabel.textContent = isSlowTrainingMode ? "بطيء جداً (0.65x)" : "هادئ (0.76x)";
+            }
+            showToast(isSlowTrainingMode ? "تم تفعيل النطق البطيء جداً للتدريب!" : "تم تفعيل الصوت التعليمي الهادئ (0.76x)!");
+        }
+
+        function changeTeacherVoice(voiceMode) {
+            preferMaleTeacher = (voiceMode === 'calm-male');
+            stopAudio();
+            speakText("Hello! Let's learn new vocabulary together.");
+            showToast(preferMaleTeacher ? "تم تفعيل صوت المعلم الهادئ" : "تم تفعيل صوت المعلمة الهادئة");
+        }
+
+        function findCalmEducationalVoice(voicesList, preferMale = false) {
+            if (!voicesList || voicesList.length === 0) return null;
+            const enVoices = voicesList.filter(v => v.lang && v.lang.toLowerCase().startsWith('en'));
+            const pool = enVoices.length > 0 ? enVoices : voicesList;
+
+            const femalePriority = [
+                'emma online (natural)',
+                'ava online (natural)',
+                'jenny online (natural)',
+                'aria online (natural)',
+                'michelle online (natural)',
+                'ana online (natural)',
+                'clara online (natural)',
+                'sonia online (natural)',
+                'google uk english female',
+                'google us english',
+                'samantha',
+                'karen',
+                'moira',
+                'tessa'
+            ];
+
+            const malePriority = [
+                'william multilingual',
+                'william online (natural)',
+                'andrew online (natural)',
+                'liam online (natural)',
+                'ryan online (natural)',
+                'daniel',
+                'david',
+                'mark'
+            ];
+
+            const listToCheck = preferMale ? [...malePriority, ...femalePriority] : [...femalePriority, ...malePriority];
+            for (const key of listToCheck) {
+                const match = pool.find(v => v.name.toLowerCase().includes(key));
+                if (match) return match;
+            }
+            return pool[0] || null;
+        }
+
+        function setSpeakingUI(isSpeaking) {
+            const pulse = document.getElementById('teacher-pulse');
+            const stopBtn = document.getElementById('stop-audio-btn');
+
+            if (isSpeaking) {
+                if (pulse) pulse.classList.remove('hidden');
+                if (stopBtn) stopBtn.classList.remove('hidden');
+            } else {
+                if (pulse) pulse.classList.add('hidden');
+                if (stopBtn) stopBtn.classList.add('hidden');
+            }
+        }
+
+        function clearHighlights() {
+            document.querySelectorAll('.active-reading-box').forEach(el => {
+                el.classList.remove('active-reading-box');
+            });
+            document.querySelectorAll('.active-reading-text').forEach(el => {
+                el.classList.remove('active-reading-text');
+            });
+        }
+
+        function highlightCardById(cardId) {
+            clearHighlights();
+            if (!cardId) return;
+            const el = document.getElementById(cardId);
+            if (!el) return;
+            el.classList.add('active-reading-box');
+            const innerText = el.querySelector('.sentence-text');
+            if (innerText) innerText.classList.add('active-reading-text');
+            el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function highlightSentence(text) {
+            clearHighlights();
+            if (!text) return;
+
+            const normalizedTarget = text.trim().replace(/\s+/g, ' ');
+            const speakElements = document.querySelectorAll('[data-speak]');
+
+            for (const el of speakElements) {
+                const attrText = (el.getAttribute('data-speak') || '').trim().replace(/\s+/g, ' ');
+                if (attrText === normalizedTarget) {
+                    if (el.classList.contains('sentence-box')) {
+                        el.classList.add('active-reading-box');
+                        const innerText = el.querySelector('.sentence-text');
+                        if (innerText) innerText.classList.add('active-reading-text');
+                    } else {
+                        el.classList.add('active-reading-text');
+                    }
+                    el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    break;
+                }
+            }
+        }
+
+        function stopAudio() {
+            isSequencePlaying = false;
+            isQuizTransitioning = false;
+            speechSessionCounter++;
+            activeTimeouts.forEach(t => {
+                clearTimeout(t);
+                clearInterval(t);
+            });
+            activeTimeouts = [];
+
+            if ('speechSynthesis' in window) {
+                try {
+                    window.speechSynthesis.cancel();
+                } catch (e) {}
+            }
+            clearHighlights();
+            hideLiveReadingToast();
+            setSpeakingUI(false);
+        }
+
+        function speakText(text, btnElement = null, keepSequenceState = false, highlightCardId = null) {
+            return new Promise((resolve) => {
+                try {
+                    if (!keepSequenceState) {
+                        stopAudio();
+                    }
+
+                    const mySession = speechSessionCounter;
+                    const rate = getCurrentSpeechRate();
+                    const pitch = preferMaleTeacher ? 0.94 : 1.04;
+
+                    if (highlightCardId) {
+                        highlightCardById(highlightCardId);
+                    } else {
+                        highlightSentence(text);
+                    }
+                    showLiveReadingToast(text);
+                    setSpeakingUI(true);
+
+                    let finished = false;
+                    let safetyTimer = null;
+                    const finishOnce = () => {
+                        if (finished) return;
+                        finished = true;
+                        if (safetyTimer) clearTimeout(safetyTimer);
+                        if (!keepSequenceState && mySession === speechSessionCounter) {
+                            clearHighlights();
+                            hideLiveReadingToast();
+                            setSpeakingUI(false);
+                        }
+                        resolve();
+                    };
+
+                    const words = text.trim().split(/\s+/).filter(Boolean).length;
+                    const safetyMs = Math.max(2200, Math.round((words / rate) * 750) + 1800);
+                    safetyTimer = setTimeout(finishOnce, safetyMs);
+                    activeTimeouts.push(safetyTimer);
+
+                    if (!('speechSynthesis' in window)) {
+                        return;
+                    }
+
+                    const startTimer = setTimeout(() => {
+                        if (mySession !== speechSessionCounter || finished) return;
+                        try {
+                            const voices = window.speechSynthesis.getVoices();
+                            const chosenVoice = findCalmEducationalVoice(voices, preferMaleTeacher);
+
+                            const utterance = new SpeechSynthesisUtterance(text);
+                            window.activeUtteranceRef = utterance;
+                            if (chosenVoice) {
+                                utterance.voice = chosenVoice;
+                                utterance.lang = chosenVoice.lang || 'en-US';
+                            } else {
+                                utterance.lang = 'en-US';
+                            }
+                            utterance.rate = rate;
+                            utterance.pitch = pitch;
+                            utterance.volume = 1.0;
+
+                            utterance.onend = finishOnce;
+                            utterance.onerror = (err) => {
+                                if (err && (err.error === 'canceled' || err.error === 'interrupted')) return;
+                                finishOnce();
+                            };
+
+                            window.speechSynthesis.speak(utterance);
+                        } catch (e) {
+                            finishOnce();
+                        }
+                    }, 50);
+                    activeTimeouts.push(startTimer);
+                } catch (err) {
+                    resolve();
+                }
+            });
+        }
+
+        let toastTimer = null;
+        function showToast(message) {
+            const toast = document.getElementById('toast-message');
+            const toastText = document.getElementById('toast-text');
+            if (!toast || !toastText) return;
+
+            toastText.textContent = message;
+            toast.classList.remove('hidden');
+
+            if (toastTimer) clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3500);
+        }
+
+        window.onload = function () {
+            renderVocabSection(storyVocabData, 'story-vocab-grid', 1);
+            renderVocabSection(listeningVocabData, 'listening-vocab-grid', 11);
+            renderQuizQuestion();
+
+            if ('speechSynthesis' in window) {
+                try {
+                    window.speechSynthesis.getVoices();
+                    window.speechSynthesis.onvoiceschanged = () => {
+                        window.speechSynthesis.getVoices();
+                    };
+                } catch (e) {}
+            }
+        };
+    </script>
+</body>
+</html>
